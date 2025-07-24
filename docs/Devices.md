@@ -73,7 +73,8 @@ An action is a task that this device can perform when it receives a trigger from
 ## Device List
 
 Below a list of all current devices available in UGC.
-> [!NOTE]Detail pages are currently still a work-in-progress
+> [!NOTE]
+> Detail pages are currently still a work-in-progress
 
 | Device Icon | Device Name          | Description |
 |-------------|----------------------|-------------|
