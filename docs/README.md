@@ -14,6 +14,6 @@ Objects are the building and environment assets of your map.
 
 Rulesets define the core rules for your game mode.
 
-## 🗺️ [UGC Map](ugcMap.md)
+## 🗺️ [UGC Map](UGCMap.md)
 
 Details about the UGC map.
