@@ -1,5 +1,7 @@
 # Timer Device
 
+![Timer Icon](../images/DeviceIcons/Device_Timer.png)
+
 ## Description
 
 Set an in-game timer next to an item.
@@ -15,5 +17,3 @@ TBD
 ## Action
 
 TBD
-
-![Timer Icon](../../images/DeviceIcons/Device_Timer.png)

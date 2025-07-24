@@ -1,6 +1,6 @@
 # VehicleSpawn Device
 
-![VehicleSpawn Icon](../../images/DeviceIcons/Device_VehicleSpawn.png)
+![VehicleSpawn Icon](../images/DeviceIcons/Device_VehicleSpawn.png)
 
 ## Name
 

@@ -1,6 +1,6 @@
 # Interaction Device
 
-![Interaction Icon](../../images/DeviceIcons/Device_Interaction.png)
+![Interaction Icon](../images/DeviceIcons/Device_Interaction.png)
 
 ## Description
 

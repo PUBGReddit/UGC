@@ -1,6 +1,6 @@
 # Score Manager Device
 
-<img src="../../images/DeviceIcons/Device_ScoreManager.png" alt="Score Manager Icon"/>
+![Score Manager Icon](../images/DeviceIcons/Device_ScoreManager.png) 
 
 ## Description
 

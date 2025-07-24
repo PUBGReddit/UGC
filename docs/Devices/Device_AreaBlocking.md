@@ -1,6 +1,6 @@
 # Area Blocking Device
 
-![AreaBlocking Icon](../../images/DeviceIcons/Device_AreaBlocking.png)
+![AreaBlocking Icon](../images/DeviceIcons/Device_AreaBlocking.png)
 
 ## Description
 

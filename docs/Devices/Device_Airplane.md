@@ -1,6 +1,6 @@
 # Airplane Device
 
-![Airplane Icon](../../images/DeviceIcons/Device_Airplane.png)
+![Airplane Icon](../images/DeviceIcons/Device_Airplane.png)
 
 ## Description
 

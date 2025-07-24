@@ -1,5 +1,7 @@
 # Teleport Device
 
+![Teleport Icon](../images/DeviceIcons/Device_Teleport.png)
+
 ## Description
 
 Teleports players or objects to a specific location.
@@ -15,5 +17,3 @@ TBD
 ## Action
 
 TBD
-
-![Teleport Icon](../../images/DeviceIcons/Device_Teleport.png)

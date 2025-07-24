@@ -1,5 +1,7 @@
 # TriggerArea Device
 
+![TriggerArea Icon](../images/DeviceIcons/Device_TriggerArea.png)
+
 # Name
 Trigger Area Device
 
@@ -18,7 +20,3 @@ TBD
 
 # Action
 TBD
-
-# TriggerArea Device
-
-![TriggerArea Icon](../../images/DeviceIcons/Device_TriggerArea.png)

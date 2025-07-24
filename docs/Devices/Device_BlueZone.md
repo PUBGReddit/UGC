@@ -1,6 +1,6 @@
 # Blue Zone Device
 
-![BlueZone Icon](../../images/DeviceIcons/Device_BlueZone.png)
+![BlueZone Icon](../images/DeviceIcons/Device_BlueZone.png)
 
 ## Description
 

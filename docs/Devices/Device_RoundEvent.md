@@ -1,6 +1,6 @@
 # Round Event Device
 
-![RoundEvent Icon](../../images/DeviceIcons/Device_RoundEvent.png)
+![RoundEvent Icon](../images/DeviceIcons/Device_RoundEvent.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Item Provide Device
 
-![ItemProvide Icon](../../images/DeviceIcons/Device_ItemProvide.png)
+![ItemProvide Icon](../images/DeviceIcons/Device_ItemProvide.png)
 
 ## Description
 
