@@ -12,4 +12,8 @@ Objects are the building and environment assets of your map.
 
 ## ⚙️ [Settings](Settings.md)
 
-Rulesets define the core rules for your game mode,
+Rulesets define the core rules for your game mode.
+
+## 🗺️ [UGC Map](ugcMap.md)
+
+Details about the UGC map.
