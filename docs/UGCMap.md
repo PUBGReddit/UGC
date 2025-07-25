@@ -2,7 +2,7 @@
 
 ## Overview
 
-The UGC Map is a dedicated map designed for UGC (User-Generated Content) creation. Currently, it is unclear if additional maps will be introduced in future updates.
+The UGC Map is a dedicated map designed for UGC (User-Generated Content) creations. Currently, it is unclear if additional maps will be introduced in future updates.
 
 ## Map Details
 
@@ -32,11 +32,13 @@ The UGC Map is a dedicated map designed for UGC (User-Generated Content) creatio
   - Teleporting into an unloaded chunk may cause character glitches
 
 ## Visuals
+
 <div style="display: flex; gap: 10px;">
   <img src="images/ugcMap.png" alt="UGC Map" style="max-height: 400px;"/>
   <img src="images/ugcMap_gameplay.png" alt="UGC Map Gameplay" style="max-height: 400px;"/>
 </div>
 
 ## Notes for Creative Builders
+
 - Teleporting into unloaded chunks can result in glitches.
 - Consider the Z render distance and dynamic loading when designing teleportation paths.

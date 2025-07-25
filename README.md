@@ -1,7 +1,7 @@
 # PUBG REDDIT UGC Wiki
 
 The purpose of this repository is to document how User-Generated Content (UGC) works in PUBG.  
-Since there is no official PUBG documentation (yet), this community-built documentation aims to help players create their own UGC maps.
+Since there is no official PUBG documentation (yet), this community-built documentation aims to help players understand and create their own UGC maps.
 
 ## ✨ UGC (User Generated Content)
 
@@ -15,7 +15,8 @@ Starting in **August** (Update 37.1), **any player with a BATTLEGROUNDS Plus acc
 
 ## 🚀 Getting Started
 
-Start browsing the [documentation here](docs/README.md)
+- Browse the [documentation here](docs/README.md)  
+- Browse some [creations](maps_gallery/README.md)
 
 ## 📚 Resources
 
