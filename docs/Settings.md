@@ -8,7 +8,7 @@ To access the settings list:
 - Press `P` to open the edit manager.
 - Navigate to the **Settings** tab.
   
-<img src="images/Settings.png" alt="Device List" style="max-height: 550px"/>
+<img src=".images//Settings.png" alt="Device List" style="max-height: 550px"/>
 
 Below you will find a list of all available settings.
 

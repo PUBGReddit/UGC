@@ -34,8 +34,8 @@ The UGC Map is a dedicated map designed for UGC (User-Generated Content) creatio
 ## Visuals
 
 <div style="display: flex; gap: 10px;">
-  <img src="images/ugcMap.png" alt="UGC Map" style="max-height: 400px;"/>
-  <img src="images/ugcMap_gameplay.png" alt="UGC Map Gameplay" style="max-height: 400px;"/>
+  <img src=".images//ugcMap.png" alt="UGC Map" style="max-height: 400px;"/>
+  <img src=".images//ugcMap_gameplay.png" alt="UGC Map Gameplay" style="max-height: 400px;"/>
 </div>
 
 ## Notes for Creative Builders

@@ -15,7 +15,7 @@ To access the device list:
 - Press `P` to open the edit manager.
 - In the **Object List** tab, navigate to the **Device** subtab.
 
-<img src="images/Device_List.png" alt="Device List" style="max-height: 550px"/>
+<img src=".images/Device_List.png" alt="Device List" style="max-height: 550px"/>
 
 ## Device Settings
 
@@ -30,7 +30,7 @@ Each device has multiple settings to configure its behavior, you can access thes
 
 All devices have the following configuration sections:
 
-<img src="images/Device_Settings.png" alt="Device List" style="max-height: 550px"/>
+<img src=".images/Device_Settings.png" alt="Device List" style="max-height: 550px"/>
 
 ### Name
 
@@ -78,32 +78,32 @@ Below a list of all current devices available in UGC.
 
 | Device Icon | Device Name          | Description |
 |-------------|----------------------|-------------|
-| <img src="images/DeviceIcons/Device_ScoreManager.png" alt="drawing" width="50"/> | [Score Manager Device](Devices/Device_ScoreManager.md) | Manage score addition and subtraction. |
-| <img src="images/DeviceIcons/Device_PlayerSpawn.png" alt="drawing" width="50"/> | [Player Spawn Device](Devices/Device_PlayerSpawn.md)   | Spawn and respawn players. |
-| <img src="images/DeviceIcons/Device_PlayerEvent.png" alt="drawing" width="50"/> | [Player Event Device](Devices/Device_PlayerEvent.md)   | Set conditions related to players and teams. |
-| <img src="images/DeviceIcons/Device_Mover.png" alt="drawing" width="50"/> | [Mover Device](Devices/Device_Mover.md)                | Move objects to a target location. |
-| <img src="images/DeviceIcons/Device_AreaBlocking.png" alt="drawing" width="50"/> | [Area Blocking Device](Devices/Device_AreaBlocking.md) | Block area to restrict player movement. |
-| <img src="images/DeviceIcons/Device_TriggerArea.png" alt="drawing" width="50"/> | [Trigger Area Device](Devices/Device_TriggerArea.md)   | Triggers when conditions are met within a designated area. |
-| <img src="images/DeviceIcons/Device_AirDrop.png" alt="drawing" width="50"/> | [Air Drop Device](Devices/Device_AirDrop.md)           | Spawn AirDrop items at a specific location. |
-| <img src="images/DeviceIcons/Device_PlayerTag.png" alt="drawing" width="50"/> | [Player Tag Device](Devices/Device_PlayerTag.md)       | Apply and remove player tags. |
-| <img src="images/DeviceIcons/Device_RoundEvent.png" alt="drawing" width="50"/> | [Round Event Device](Devices/Device_RoundEvent.md)     | Set conditions for round-based events. |
-| <img src="images/DeviceIcons/Device_Timer.png" alt="drawing" width="50"/> | [Timer Device](Devices/Device_Timer.md)                | Set an in-game timer next to an item. |
-| <img src="images/DeviceIcons/Device_ItemSpawn.png" alt="drawing" width="50"/> | [Item Spawn Device](Devices/Device_ItemSpawn.md)       | Spawn items in a predetermined location. |
-| <img src="images/DeviceIcons/Device_ItemProvide.png" alt="drawing" width="50"/> | [Item Provide Device](Devices/Device_ItemProvide.md)   | Directly give items to players. |
-| <img src="images/DeviceIcons/Device_Teleport.png" alt="drawing" width="50"/> | [Teleport Device](Devices/Device_Teleport.md)          | Teleports players or objects to a specific location. |
-| <img src="images/DeviceIcons/Device_BlueZone.png" alt="drawing" width="50"/> | [Blue Zone Device](Devices/Device_BlueZone.md)         | Create a damaged zone that shrinks over time. |
-| <img src="images/DeviceIcons/Device_PlayerDamage.png" alt="drawing" width="50"/> | [Player Damage Device](Devices/Device_PlayerDamage.md) | Deal damage to players. |
-| <img src="images/DeviceIcons/Device_Interaction.png" alt="drawing" width="50"/> | [Interaction Device](Devices/Device_Interaction.md)    | Allow players to interact with an object. |
-| <img src="images/DeviceIcons/Device_DamageTrigger.png" alt="drawing" width="50"/> | [Damage Trigger Device](Devices/Device_DamageTrigger.md) | Triggers when damage is taken. |
-| <img src="images/DeviceIcons/Device_PlayerStatus.png" alt="drawing" width="50"/> | [Player Status Device](Devices/Device_PlayerStatus.md) | Set or change player statuses. |
-| <img src="images/DeviceIcons/Device_ChanceTrigger.png" alt="drawing" width="50"/> | [Chance Trigger Device](Devices/Device_ChanceTrigger.md) | Trigger event based on chance. |
-| <img src="images/DeviceIcons/Device_RandomTrigger.png" alt="drawing" width="50"/> | [Random Trigger Device](Devices/Device_RandomTrigger.md) | Execute a trigger randomly from a predetermined list. |
-| <img src="images/DeviceIcons/Device_ConquestArea.png" alt="drawing" width="50"/> | [Conquest Area Device](Devices/Device_ConquestArea.md) | Create an area that can be conquered. |
-| <img src="images/DeviceIcons/Device_RedZone.png" alt="drawing" width="50"/> | [Red Zone Device](Devices/Device_RedZone.md)           | Configure red zone settings. |
-| <img src="images/DeviceIcons/Device_VehicleSpawn.png" alt="drawing" width="50"/> | [Vehicle Spawn Device](Devices/Device_VehicleSpawn.md) | Spawn vehicles at a specific location. |
-| <img src="images/DeviceIcons/Device_SpecialZone.png" alt="drawing" width="50"/> | [Special Zone Device](Devices/Device_SpecialZone.md)   | Create a special zone with unique effects. |
-| <img src="images/DeviceIcons/Device_PlayerIcon.png" alt="drawing" width="50"/> | [Player Icon Device](Devices/Device_PlayerIcon.md)     | Display an icon above players. |
-| <img src="images/DeviceIcons/Device_SuperJump.png" alt="drawing" width="50"/> | [Super Jump Device](Devices/Device_SuperJump.md)       | Enable players to jump higher via jump pads. |
-| <img src="images/DeviceIcons/Device_Airplane.png" alt="drawing" width="50"/> | [Airplane Device](Devices/Device_Airplane.md)          | Put players inside an airplane at the beginning of the match. |
-| <img src="images/DeviceIcons/Device_WeaponDamage.png" alt="drawing" width="50"/> | [Weapon Damage Device](Devices/Device_WeaponDamage.md) | Adjust the damage values of various weapons. |
-| <img src="images/DeviceIcons/Device_BGM.png" alt="drawing" width="50"/> | [BGM Device](Devices/Device_BGM.md)                    | Configure background music settings. |
+| <img src=".images/DeviceIcons/Device_ScoreManager.png" alt="drawing" width="50"/> | [Score Manager Device](Devices/Device_ScoreManager.md) | Manage score addition and subtraction. |
+| <img src=".images/DeviceIcons/Device_PlayerSpawn.png" alt="drawing" width="50"/> | [Player Spawn Device](Devices/Device_PlayerSpawn.md)   | Spawn and respawn players. |
+| <img src=".images/DeviceIcons/Device_PlayerEvent.png" alt="drawing" width="50"/> | [Player Event Device](Devices/Device_PlayerEvent.md)   | Set conditions related to players and teams. |
+| <img src=".images/DeviceIcons/Device_Mover.png" alt="drawing" width="50"/> | [Mover Device](Devices/Device_Mover.md)                | Move objects to a target location. |
+| <img src=".images/DeviceIcons/Device_AreaBlocking.png" alt="drawing" width="50"/> | [Area Blocking Device](Devices/Device_AreaBlocking.md) | Block area to restrict player movement. |
+| <img src=".images/DeviceIcons/Device_TriggerArea.png" alt="drawing" width="50"/> | [Trigger Area Device](Devices/Device_TriggerArea.md)   | Triggers when conditions are met within a designated area. |
+| <img src=".images/DeviceIcons/Device_AirDrop.png" alt="drawing" width="50"/> | [Air Drop Device](Devices/Device_AirDrop.md)           | Spawn AirDrop items at a specific location. |
+| <img src=".images/DeviceIcons/Device_PlayerTag.png" alt="drawing" width="50"/> | [Player Tag Device](Devices/Device_PlayerTag.md)       | Apply and remove player tags. |
+| <img src=".images/DeviceIcons/Device_RoundEvent.png" alt="drawing" width="50"/> | [Round Event Device](Devices/Device_RoundEvent.md)     | Set conditions for round-based events. |
+| <img src=".images/DeviceIcons/Device_Timer.png" alt="drawing" width="50"/> | [Timer Device](Devices/Device_Timer.md)                | Set an in-game timer next to an item. |
+| <img src=".images/DeviceIcons/Device_ItemSpawn.png" alt="drawing" width="50"/> | [Item Spawn Device](Devices/Device_ItemSpawn.md)       | Spawn items in a predetermined location. |
+| <img src=".images/DeviceIcons/Device_ItemProvide.png" alt="drawing" width="50"/> | [Item Provide Device](Devices/Device_ItemProvide.md)   | Directly give items to players. |
+| <img src=".images/DeviceIcons/Device_Teleport.png" alt="drawing" width="50"/> | [Teleport Device](Devices/Device_Teleport.md)          | Teleports players or objects to a specific location. |
+| <img src=".images/DeviceIcons/Device_BlueZone.png" alt="drawing" width="50"/> | [Blue Zone Device](Devices/Device_BlueZone.md)         | Create a damaged zone that shrinks over time. |
+| <img src=".images/DeviceIcons/Device_PlayerDamage.png" alt="drawing" width="50"/> | [Player Damage Device](Devices/Device_PlayerDamage.md) | Deal damage to players. |
+| <img src=".images/DeviceIcons/Device_Interaction.png" alt="drawing" width="50"/> | [Interaction Device](Devices/Device_Interaction.md)    | Allow players to interact with an object. |
+| <img src=".images/DeviceIcons/Device_DamageTrigger.png" alt="drawing" width="50"/> | [Damage Trigger Device](Devices/Device_DamageTrigger.md) | Triggers when damage is taken. |
+| <img src=".images/DeviceIcons/Device_PlayerStatus.png" alt="drawing" width="50"/> | [Player Status Device](Devices/Device_PlayerStatus.md) | Set or change player statuses. |
+| <img src=".images/DeviceIcons/Device_ChanceTrigger.png" alt="drawing" width="50"/> | [Chance Trigger Device](Devices/Device_ChanceTrigger.md) | Trigger event based on chance. |
+| <img src=".images/DeviceIcons/Device_RandomTrigger.png" alt="drawing" width="50"/> | [Random Trigger Device](Devices/Device_RandomTrigger.md) | Execute a trigger randomly from a predetermined list. |
+| <img src=".images/DeviceIcons/Device_ConquestArea.png" alt="drawing" width="50"/> | [Conquest Area Device](Devices/Device_ConquestArea.md) | Create an area that can be conquered. |
+| <img src=".images/DeviceIcons/Device_RedZone.png" alt="drawing" width="50"/> | [Red Zone Device](Devices/Device_RedZone.md)           | Configure red zone settings. |
+| <img src=".images/DeviceIcons/Device_VehicleSpawn.png" alt="drawing" width="50"/> | [Vehicle Spawn Device](Devices/Device_VehicleSpawn.md) | Spawn vehicles at a specific location. |
+| <img src=".images/DeviceIcons/Device_SpecialZone.png" alt="drawing" width="50"/> | [Special Zone Device](Devices/Device_SpecialZone.md)   | Create a special zone with unique effects. |
+| <img src=".images/DeviceIcons/Device_PlayerIcon.png" alt="drawing" width="50"/> | [Player Icon Device](Devices/Device_PlayerIcon.md)     | Display an icon above players. |
+| <img src=".images/DeviceIcons/Device_SuperJump.png" alt="drawing" width="50"/> | [Super Jump Device](Devices/Device_SuperJump.md)       | Enable players to jump higher via jump pads. |
+| <img src=".images/DeviceIcons/Device_Airplane.png" alt="drawing" width="50"/> | [Airplane Device](Devices/Device_Airplane.md)          | Put players inside an airplane at the beginning of the match. |
+| <img src=".images/DeviceIcons/Device_WeaponDamage.png" alt="drawing" width="50"/> | [Weapon Damage Device](Devices/Device_WeaponDamage.md) | Adjust the damage values of various weapons. |
+| <img src=".images/DeviceIcons/Device_BGM.png" alt="drawing" width="50"/> | [BGM Device](Devices/Device_BGM.md)                    | Configure background music settings. |
