@@ -38,7 +38,18 @@ The UGC Map is a dedicated map designed for UGC (User-Generated Content) creatio
   <img src=".images//ugcMap_gameplay.png" alt="UGC Map Gameplay" style="max-height: 400px;"/>
 </div>
 
+## Object and Device Limitations
+
+- **Devices**: 1,000 maximum per map
+- **Props**: 3,000 total maximum per map
+  - Large House: 1 maximum
+  - Medium House: 5 maximum  
+  - Small House: 40 maximum
+  - All other props: No individual limits
+
 ## Notes for Creative Builders
 
 - Teleporting into unloaded chunks can result in glitches.
 - Consider the Z render distance and dynamic loading when designing teleportation paths.
+- Plan your map design carefully to stay within the device and prop limitations.
+- Prioritize essential devices and props when approaching the limits.

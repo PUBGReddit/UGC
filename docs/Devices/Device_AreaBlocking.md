@@ -8,12 +8,31 @@ Block area to restrict player movement.
 
 ## Basic
 
-TBD
+| Setting                                      | Default Value     | Description                                      |
+|----------------------------------------------|-------------------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
+| Block Throwables                             | False             | Blocks throwable items from entering the area.    |
+| Blue Effect                                  | False             | Enables a blue visual effect in the blocked area. |
+| Block Area                                   | False             | Enables area blocking.                           |
+| Block Area Shape                             | Box               | Shape of the blocked area.                        |
+| Block Area Size                              | X: 50, Y: 50, Z: 50 | Size of the blocked area in centimeters.         |
 
 ## Trigger
 
-TBD
+| Trigger                | Description                                                        |
+|------------------------|--------------------------------------------------------------------|
+| On Deactivate Device   | Triggered when the device is deactivated.                          |
+| On Activate Device     | Triggered when the device is activated.                            |
 
 ## Action
 
-TBD
+| Action                        | Description                                                        |
+|-------------------------------|--------------------------------------------------------------------|
+| Deactivate Throwable Blocking | Disables throwable blocking in the area.                          |
+| Deactivate Blue Effect        | Disables the blue effect in the area.                             |
+| Deactivate Blocking           | Disables area blocking.                                            |
+| Activate Throwable Blocking   | Enables throwable blocking in the area.                           |
+| Activate Blue Effect          | Enables the blue effect in the area.                              |
+| Activate Blocking             | Enables area blocking.                                             |
+| Deactivate Device             | Disables the target device when this device is triggered.          |
+| Activate Device               | Enables the target device when this device is triggered.           |

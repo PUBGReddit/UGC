@@ -8,12 +8,32 @@ Put players inside an airplane at the beginning of the match.
 
 ## Basic
 
-TBD
+| Setting                                      | Default Value     | Description                                      |
+|----------------------------------------------|-------------------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | Activating Team    | Specifies the target team.                        |
+| Route Type                                   | Center            | The route type for the airplane.                  |
+| Min Fall Distance                            | 20                | Minimum distance for falling.                     |
+| Airplane Starting Radius                     | 100               | Starting radius of the airplane.                  |
+| Airplane Speed                               | 4000              | Speed of the airplane.                            |
+| Airplane Distance to Target                  | 10000             | Distance from airplane to target.                 |
+| Airplane Altitude                            | 100000            | Altitude of the airplane.                         |
+| Parachute Start Deploy Altitude              | 30000             | Altitude to start parachute deployment.           |
+| Parachute Auto Deploy Altitude               | 15000             | Altitude for automatic parachute deployment.      |
 
 ## Trigger
 
-TBD
+| Trigger                | Description                                                        |
+|------------------------|--------------------------------------------------------------------|
+| On Start Airplane      | Triggered when the airplane starts.                                |
+| On Player Eject        | Triggered when a player ejects from the airplane.                  |
+| On Deactivate Device   | Triggered when the device is deactivated.                          |
+| On Activate Device     | Triggered when the device is activated.                            |
 
 ## Action
 
-TBD
+| Action                | Description                                                        |
+|-----------------------|--------------------------------------------------------------------|
+| Start Airplane        | Starts the airplane.                                                |
+| Deactivate Device     | Disables the target device when this device is triggered.           |
+| Activate Device       | Enables the target device when this device is triggered.            |

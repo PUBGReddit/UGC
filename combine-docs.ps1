@@ -141,23 +141,28 @@ Write-Host "`n=== Processing Devices Folder ===" -ForegroundColor Yellow
 $DevicesFolderPath = Join-Path -Path $DocsPath -ChildPath "Devices"
 Add-FolderContent -FolderPath $DevicesFolderPath -SectionTitle "Device Documentation"
 
+# 8. Guides folder content
+Write-Host "`n=== Processing Guides Folder ===" -ForegroundColor Yellow
+$GuidesFolderPath = Join-Path -Path $DocsPath -ChildPath "Guides"
+Add-FolderContent -FolderPath $GuidesFolderPath -SectionTitle "Guides Documentation"
+
 # Write the combined content to output file
 Write-Host "`n=== Writing Combined Documentation ===" -ForegroundColor Yellow
 try {
     # Join all content with newlines
     $FinalContent = $CombinedContent -join "`n"
     
-    # Post-process: Fix image paths to include docs/ prefix
-    Write-Host "Post-processing: Fixing image paths..." -ForegroundColor Cyan
+    # Post-process: Remove all image references from the documentation
+    Write-Host "Post-processing: Removing image references..." -ForegroundColor Cyan
     
-    # Fix HTML img tags - add docs/ prefix to src paths that don't already have docs/
-    $FinalContent = $FinalContent -replace '<img([^>]+)src="\.images/', '<img$1src="docs/.images/'
-    $FinalContent = $FinalContent -replace '<img([^>]+)src="images/', '<img$1src="docs/images/'
+    # Remove HTML img tags completely
+    $FinalContent = $FinalContent -replace '<img[^>]*>', ''
     
-    # Fix markdown image syntax - add docs/ prefix to paths that don't already have docs/
-    $FinalContent = $FinalContent -replace '!\[([^\]]*)\]\(\.images/', '![$1](docs/.images/'
-    $FinalContent = $FinalContent -replace '!\[([^\]]*)\]\(\.\./images/', '![$1](docs/images/'
-    $FinalContent = $FinalContent -replace '!\[([^\]]*)\]\(images/', '![$1](docs/images/'
+    # Remove markdown image syntax
+    $FinalContent = $FinalContent -replace '!\[[^\]]*\]\([^)]*\)', ''
+    
+    # Clean up any extra blank lines that might result from image removal
+    $FinalContent = $FinalContent -replace '(\r?\n){3,}', "`n`n"
     
     # Write to file with UTF-8 encoding (no BOM)
     $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False

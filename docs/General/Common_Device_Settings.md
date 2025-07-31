@@ -15,7 +15,10 @@ Set the phase during which the device is activated:
 > Activation phase is not to be confused with when the devices does something.  
 > This setting is when the device itself is available (powered ON) to perform actions & trigger events.  
 
-The different game phases is documented more in detail [here](../General/GamePhases.md).
+Activation Phases only determine when the device becomes active, not when it performs an action or triggers.
+Setting Activation Phase to Device Creation does NOT automatic trigger devices when the match starts.
+If a Device receives a trigger to active it's Action, and the device is not yet Activated it will not do anything.
+A device MUST be active, either by phase, or a dedicated `Activate Device` Trigger before it can perform any Action.
 
 ## Target
 

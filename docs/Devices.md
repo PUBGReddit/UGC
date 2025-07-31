@@ -6,8 +6,19 @@ Devices are tools that add logic and interaction to your game modes.
 They enable dynamic gameplay elements such as triggers, spawn locations, items, and more.
 
 Devices are a core element of any game mode to be created.  
-Currently, there is a limit of 1000 devices in a single UGC map.
 
+## Spawn Limits
+
+Every map has device limitations, which you see at the top left corner while in Edit mode.
+
+**Total Devices:** 1,000 maximum per map
+
+**Type Limits:**
+
+- **Vehicles:** 25
+
+Each device has a limit of up to 100 triggers.
+  
 ## Accessing the Device List
 
 To access the device list:
@@ -44,6 +55,8 @@ You can customize this name for clarity, limited to 30 alphanumeric characters.
 This tab contains all the main adjustable settings for the specific device.  
 Some common settings are described [here](General/Common_Device_Settings.md).
 
+Activation Phase is commonly misunderstood. This setting defines when the device is ON. It never acts as a Trigger to the device itself.
+
 ---
 
 ### Change
@@ -54,7 +67,8 @@ This tab shows only the settings that you have changed from their default values
 
 ### Trigger
 
-A trigger is an event from this device that can start an action on another device.
+A trigger is an event from this device that can start an action on **another** device.
+All documented Triggers can be used to start an Action on other devices.
 
 > If **this device** does `Trigger`, do `Action` on **another device**.
 
@@ -63,12 +77,11 @@ A trigger is an event from this device that can start an action on another devic
 ### Action
 
 An action is a task that this device can perform when it receives a trigger from another device.
+All documented Actions can be started by a Trigger of another device. An action is NEVER executed as a result of the 'Activation Phase'
 
 > Do `Action` on **this device** when a `Trigger` happens on **another device**.
 
 ---
-
-*Note: A device can never Trigger an Action on itself.*
 
 ## Device List
 

@@ -8,15 +8,26 @@ Display an icon above players.
 
 ## Basic
 
-- **Icon Type**: Define the type of icon to assign.
-- **Icon Duration**: Set the duration for the icon.
+| Setting                                                    | Default Value      | Description                                                      |
+|------------------------------------------------------------|--------------------|------------------------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation      | The phase when the device is activated.                          |
+| [Target](../General/Common_Device_Settings.md#target)                     | Activating Team      | Specifies the target team for the icon.                          |
+| Icon Type                                                  | None               | The type of icon to display above the player.                    |
 
 ## Trigger
 
-- **On Icon Assigned**: Trigger an event when an icon is assigned.
-- **On Icon Removed**: Trigger an event when an icon is removed.
+| Trigger                | Description                                                      |
+|------------------------|------------------------------------------------------------------|
+| On Set Icon            | Triggered when the icon is set.                                   |
+| Deactivate Device      | Disables the target device when this device is triggered.         |
+| Activate Device        | Enables the target device when this device is triggered.          |
 
 ## Action
 
-- **Assign Icon**: Assign an icon to a player.
-- **Remove Icon**: Remove an icon from a player.
+| Action                 | Description                                                      |
+|------------------------|------------------------------------------------------------------|
+| Apply Icon             | Assign an icon to a player.                                      |
+| On Deactivate Device   | Triggered when the device is deactivated.                        |
+| On Activate Device     | Triggered when the device is activated.                          |
+
+
