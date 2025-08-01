@@ -4,7 +4,7 @@
 
 ## Description
 
-Execute a trigger randomly from a predetermined list.
+Execute a Action randomly from a predetermined list.
 
 ## Basic
 

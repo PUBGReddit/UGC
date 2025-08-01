@@ -4,7 +4,7 @@
 
 ## Description
 
-Teleports players or objects to a specific location.
+Teleports players to a specific location.
 
 ## Basic
 

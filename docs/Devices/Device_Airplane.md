@@ -4,7 +4,7 @@
 
 ## Description
 
-Put players inside an airplane at the beginning of the match.
+Put players inside an airplane.
 
 ## Basic
 

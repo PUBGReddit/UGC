@@ -8,7 +8,7 @@ Trigger Area Device
 
 ## Description
 
-Triggers when conditions are met within a designated area.
+Triggers on Enter or Exit.
 
 ## Basic
 

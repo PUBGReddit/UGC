@@ -4,7 +4,7 @@
 
 ## Description
 
-Spawn AirDrop items at a specific location.
+Configures an AirDrop.
 
 ## Basic
 

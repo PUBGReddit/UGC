@@ -4,7 +4,7 @@
 
 ## Description
 
-Create a damaged zone that shrinks over time.
+Configure a Blue Zone.
 
 ## Basic
 

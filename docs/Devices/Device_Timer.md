@@ -4,7 +4,7 @@
 
 ## Description
 
-Set an in-game timer next to an item.
+Configure a timer to trigger actions at specific interval(s).
 
 ## Basic
 

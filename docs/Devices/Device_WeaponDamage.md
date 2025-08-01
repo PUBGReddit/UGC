@@ -4,7 +4,7 @@
 
 ## Description
 
-Adjust the damage values of various weapons.
+Adjust the damage values of various damage categories.
 
 ## Basic
 
