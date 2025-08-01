@@ -162,3 +162,11 @@ code {
 .mud-appbar {
     z-index: 3;
 }
+
+ 
+.diagram-container {
+    width: 100%;
+    height: calc(100% - 52px);
+    border: 1px solid black; /* Just visual */
+
+}

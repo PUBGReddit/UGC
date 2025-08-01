@@ -1,156 +1,38 @@
 @page "/weather"
-@using MudBlazor.Utilities
+@inherits WeatherComponent
 
-<MudContainer Class="mt-4">
-    <MudPaper Class="pa-4" Elevation="3">
-        <MudText Typo="Typo.h4" Class="mb-4" Color="Color.Primary">Weather Forecast</MudText>
-        
-        <MudGrid>
-            <MudItem xs="12" sm="8" md="6">
-                <MudTextField @bind-Value="City" Label="Enter City" Variant="Variant.Outlined" 
-                              Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" 
-                              OnAdornmentClick="SearchWeather" />
-            </MudItem>
-            
-            <MudItem xs="12" sm="4" md="2">
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" 
-                           OnClick="SearchWeather" Class="mt-2">
-                    Search
-                </MudButton>
-            </MudItem>
-        </MudGrid>
-        
-        @if (IsLoading)
-        {
-            <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-4" />
-        }
-        else if (ShowWeather)
-        {
-            <MudCard Class="mt-4">
-                <MudCardHeader>
-                    <MudText Typo="Typo.h5">@City Weather</MudText>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudGrid>
-                        <MudItem xs="12" md="6">
-                            <MudStack>
-                                <MudIcon Icon="@GetWeatherIcon()" Size="Size.Large" Class="ma-2" />
-                                <MudText Typo="Typo.h3">@Temperature°C</MudText>
-                                <MudText Typo="Typo.body1">Feels like: @FeelsLike°C</MudText>
-                                <MudText Typo="Typo.body1">Condition: @WeatherCondition</MudText>
-                            </MudStack>
-                        </MudItem>
-                        <MudItem xs="12" md="6">
-                            <MudPaper Class="pa-3">
-                                <MudGrid>
-                                    <MudItem xs="4">
-                                        <MudIcon Icon="@Icons.Material.Filled.Air" Size="Size.Large" />
-                                    </MudItem>
-                                    <MudItem xs="8">
-                                        <MudText>Wind: @WindSpeed km/h</MudText>
-                                    </MudItem>
-                                    
-                                    <MudItem xs="4">
-                                        <MudIcon Icon="@Icons.Material.Filled.Opacity" Size="Size.Large" />
-                                    </MudItem>
-                                    <MudItem xs="8">
-                                        <MudText>Humidity: @Humidity%</MudText>
-                                    </MudItem>
-                                    
-                                    <MudItem xs="4">
-                                        <MudIcon Icon="@Icons.Material.Filled.Visibility" Size="Size.Large" />
-                                    </MudItem>
-                                    <MudItem xs="8">
-                                        <MudText>Visibility: @Visibility km</MudText>
-                                    </MudItem>
-                                </MudGrid>
-                            </MudPaper>
-                        </MudItem>
-                    </MudGrid>
-                </MudCardContent>
-            </MudCard>
-        }
-        
-        @if (!string.IsNullOrEmpty(ErrorMessage))
-        {
-            <MudAlert Severity="Severity.Error" Class="mt-4">@ErrorMessage</MudAlert>
-        }
-    </MudPaper>
-</MudContainer>
+@inject LayoutData LayoutData
+@using MudBlazor
+@using MudBlazor.Utilities
+@using Blazor.Diagrams.Components
+@using Blazor.Diagrams.Components.Widgets
+
+ 
+ <div class="diagram-container">
+<CascadingValue Value="BlazorDiagram">
+    <DiagramCanvas>
+        <Widgets>
+            <NavigatorWidget Width="200"
+                             Height="150"
+                             Style="position: absolute; bottom: 15px; right: 15px; border: 1px solid black;">
+            </NavigatorWidget>
+            <SelectionBoxWidget/>
+        </Widgets>
+    </DiagramCanvas>
+</CascadingValue>
+ </div>
 
 @code {
-    private string City { get; set; } = "London";
-    private bool IsLoading { get; set; } = false;
-    private bool ShowWeather { get; set; } = false;
-    private string ErrorMessage { get; set; } = "";
-    
-    // Weather data properties
-    private double Temperature { get; set; } = 20.5;
-    private double FeelsLike { get; set; } = 21.0;
-    private string WeatherCondition { get; set; } = "Cloudy";
-    private double WindSpeed { get; set; } = 10.5;
-    private int Humidity { get; set; } = 65;
-    private double Visibility { get; set; } = 10.0;
-    
-    private async Task SearchWeather()
+    private bool _zoomEnabled = true;
+    private bool _panningEnabled = true;
+    private bool _virtualizationEnabled = true;
+
+    protected override void OnInitialized()
     {
-        if (string.IsNullOrWhiteSpace(City))
-        {
-            ErrorMessage = "Please enter a city name";
-            return;
-        }
-        
-        IsLoading = true;
-        ErrorMessage = "";
-        
-        try
-        {
-            // In a real application, you would call a weather API here
-            // For demonstration purposes, we'll just simulate a response
-            await Task.Delay(1500); // Simulate API call delay
-            
-            // Simulate success (in real app, parse API response)
-            Random random = new Random();
-            Temperature = Math.Round(random.NextDouble() * 30 + 5, 1);
-            FeelsLike = Math.Round(Temperature + (random.NextDouble() * 2 - 1), 1);
-            
-            string[] conditions = { "Sunny", "Cloudy", "Rainy", "Partly Cloudy", "Clear", "Stormy" };
-            WeatherCondition = conditions[random.Next(conditions.Length)];
-            
-            WindSpeed = Math.Round(random.NextDouble() * 30, 1);
-            Humidity = random.Next(30, 95);
-            Visibility = Math.Round(random.NextDouble() * 15 + 5, 1);
-            
-            ShowWeather = true;
-        }
-        catch (Exception ex)
-        {
-            ErrorMessage = $"Error retrieving weather data: {ex.Message}";
-            ShowWeather = false;
-        }
-        finally
-        {
-            IsLoading = false;
-        }
-    }
-    
-    protected override async Task OnInitializedAsync()
-    {
-        // Load default city weather on page load
-        await SearchWeather();
-    }
-    
-    private string GetWeatherIcon()
-    {
-        return WeatherCondition.ToLower() switch
-        {
-            "sunny" => Icons.Material.Filled.WbSunny,
-            "clear" => Icons.Material.Filled.Brightness5,
-            "cloudy" => Icons.Material.Filled.Cloud,
-            "partly cloudy" => Icons.Material.Filled.FilterDrama,
-            "rainy" => Icons.Material.Filled.Grain,
-            "stormy" => Icons.Material.Filled.Thunderstorm,
-            _ => Icons.Material.Filled.Cloud
-        };
+        base.OnInitialized();
+
+        LayoutData.Title = "PUBG UGC Diagram";
+        LayoutData.Info = "Device connection diagram using MudBlazor components.";
+        LayoutData.DataChanged();
     }
 }
