@@ -1,16 +1,18 @@
 @inherits LayoutComponentBase
 
-<MudThemeProvider Theme="@_theme" IsDarkMode="_isDarkMode" />
+<MudThemeProvider Theme="@_theme" IsDarkMode="true" />
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
-        <MudText Typo="Typo.h5" Class="ml-3">PUBG Application</MudText>
-        <MudSpacer />
-        <MudIconButton Icon="@DarkLightModeButtonIcon" Color="Color.Inherit" Edge="Edge.End" OnClick="@DarkModeToggle" />
+        <MudText Typo="Typo.h5" Class="ml-3"></MudText>
+            <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+
+    <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Cloud">Weather</MudNavLink>
+        <MudSpacer /> 
     </MudAppBar>
-    <MudDrawer id="nav-drawer" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
+    @* <MudDrawer id="nav-drawer" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu />
-    </MudDrawer>
+    </MudDrawer> *@
     <MudMainContent Class="pt-16 pa-4">
         @Body
     </MudMainContent>
@@ -18,8 +20,7 @@
 
 
 @code {
-    private bool _drawerOpen = true;
-    private bool _isDarkMode = true;
+    private bool _drawerOpen = true; 
     private MudTheme? _theme = null;
 
     protected override void OnInitialized()
@@ -27,8 +28,7 @@
         base.OnInitialized();
 
         _theme = new()
-        {
-            PaletteLight = _lightPalette,
+        { 
             PaletteDark = _darkPalette,
             LayoutProperties = new LayoutProperties()
         };
@@ -38,29 +38,6 @@
     {
         _drawerOpen = !_drawerOpen;
     }
-
-    private void DarkModeToggle()
-    {
-        _isDarkMode = !_isDarkMode;
-    }
-
-    private readonly PaletteLight _lightPalette = new()
-    {
-        Primary = "#F2A900", // PUBG Orange
-        Secondary = "#A69B98", // PUBG Tan
-        Tertiary = "#8A7353", // PUBG Green
-        Black = "#000000", // PUBG Black
-        AppbarText = "#222222", // PUBG Gray
-        AppbarBackground = "rgba(255,255,255,0.9)",
-        DrawerBackground = "#FFFFFF", // PUBG White
-        GrayLight = "#A69B98", // PUBG Tan (lighter shade)
-        GrayLighter = "#f9f9f9",
-        Background = "#FFFFFF", // PUBG White
-        Info = "#4a86ff",
-        Success = "#8A7353", // PUBG Green
-        Warning = "#F2A900", // PUBG Orange
-        Error = "#ff3f5f",
-    };
 
     private readonly PaletteDark _darkPalette = new()
     {
@@ -93,11 +70,7 @@
         OverlayLight = "#22222280", // PUBG Gray with transparency
     };
 
-    public string DarkLightModeButtonIcon => _isDarkMode switch
-    {
-        true => Icons.Material.Rounded.AutoMode,
-        false => Icons.Material.Outlined.DarkMode,
-    };
+ 
 }
 
 
