@@ -13,15 +13,15 @@ Combination of differen Types can be active at the same time.
 
 ## Basic
 
-| Setting                                                      | Default Value     | Description                                                                 |
-|--------------------------------------------------------------|-------------------|-----------------------------------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.                                      |
-| Special Zone Type                                            | Blizzard          | Type of special zone effect.                                                |
-| Zone Repeat Time                                             | 1                 | Time interval to repeat the special zone.                                   |
-| Next Zone Interval                                           | 1                 | Interval before the next special zone starts.                               |
-| Zone Begin Delay                                             | 45                | Delay before the first special zone begins.                                 |
-| Zone Duration                                                | 30                | Duration of the special zone.                                               |
-| Zone Radius                                                  | 50000             | Radius of the special zone area.                                            |
+| Setting                                                      | Default Value     | Type | Range | Description                                                                 |
+|--------------------------------------------------------------|-------------------|------|-------|-----------------------------------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.                                      |
+| Special Zone Type                                            | Blizzard          | Option | None, Blizzard, Sandstorm, EMP | Type of special zone effect.                                                |
+| Zone Repeat Time                                             | 1                 | Number | 1-1000 | Time interval to repeat the special zone.                                   |
+| Next Zone Interval                                           | 1                 | Number | 1-1000 | Interval before the next special zone starts.                               |
+| Zone Begin Delay                                             | 45                | Number | 1-1000 | Delay before the first special zone begins.                                 |
+| Zone Duration                                                | 30                | Number | 1-1000 | Duration of the special zone.                                               |
+| Zone Radius                                                  | 50000             | Number | 2000-1000000 | Radius of the special zone area.                                            |
 
 ## Trigger
 

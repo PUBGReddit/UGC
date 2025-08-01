@@ -8,10 +8,10 @@ Trigger event based on chance.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| Probability                                  | 50                | The chance (percentage) for the trigger to succeed.|
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| Probability                                  | 50                | Number | 0-100 | The chance (percentage) for the trigger to succeed.|
 
 ## Trigger
 

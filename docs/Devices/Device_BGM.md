@@ -8,10 +8,10 @@ Configure background music settings.
 
 ## Basic
 
-| Setting                                                    | Default Value      | Description                                                      |
-|------------------------------------------------------------|--------------------|------------------------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation      | The phase when the device is activated.                          |
-| Select BGM                                                 | BGM_Landmark_01    | The BGM track to play when the device is activated.              |
+| Setting                                                    | Default Value      | Type | Range | Description                                                      |
+|------------------------------------------------------------|--------------------|------|-------|------------------------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation      | Option | | The phase when the device is activated.                          |
+| Select BGM                                                 | BGM_Landmark_01    | Option | BGM_Landmark_01, BGM_Christmas_01, BGM_Christmas_02, Ready To Battle (Early Access), BGM_Halloween_01, Lone Survivor's Dream (Bizarre Battle Royale), BGM_POBG_01, BGM_SLB_01, BGM_TDM_01, BGM_TDM_02 | The BGM track to play when the device is activated.              |
 
 ## Trigger
 

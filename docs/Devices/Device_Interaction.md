@@ -8,13 +8,13 @@ Allow players to interact with an object.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Specifies the target players.                     |
-| Interaction Duration                         | 5                 | Duration of the interaction in seconds.           |
-| Restrict Movement                            | False             | Restricts player movement during interaction.     |
-| Select Object                                | Controller        | The object to be interacted with.                 |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Option | All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Interaction Duration                         | 5                 | Number | 0-3600 | Duration of the interaction in seconds.           |
+| Restrict Movement                            | False             | Boolean | True, False | Restricts player movement during interaction.     |
+| Select Object                                | Controller        | Option | Controller, Computer, Device, Generator, Pot | The object to be interacted with.                 |
 
 ## Trigger
 

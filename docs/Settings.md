@@ -14,7 +14,7 @@ Below you will find a list of all available settings.
 
 ## Rule Set
 
-| Category | Rule | Description | Default Value | Options |
+| Category | Rule | Description | Default Value | Range |
 |----------|------|-------------|---------------|---------|
 | Mode     | Mode Type | Determine the type of mode. | NONE | NONE, SHOOTING: BATTLE ROYALE, SHOOTING: DEATHMATCH, SHOOTING: CONQUEST, OTHER SHOOTING, NON-SHOOTING: PARKOUR, NON-SHOOTING: TRAINING, OTHER NON-SHOOTING |
 | Rounds   | Round Count | Set the total number of rounds. If a team wins more than half of the total rounds, that team is declared the winner and the match ends. If there are three or more teams and the number of wins is tied, all tied teams are declared winners. | 3 |  |
@@ -38,7 +38,7 @@ Below you will find a list of all available settings.
 
 ## Game Options
 
-| Option | Description | Default Value | Options |
+| Option | Description | Default Value | Range |
 |--------|-------------|---------------|---------|
 | Allow Team Select | Allow the host to manually select teams. | False |  |
 | Overflow Assign | Determine how to handle overflow players when teams are full. | Overflow Assign | Overflow Assign, Spectator, Observer |

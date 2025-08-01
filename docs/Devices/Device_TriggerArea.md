@@ -2,26 +2,28 @@
 
 ![TriggerArea Icon](../images/DeviceIcons/Device_TriggerArea.png)
 
-# Name
+## Name
+
 Trigger Area Device
 
-# Description
+## Description
 
 Triggers when conditions are met within a designated area.
 
-# Basic
+## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Specifies the target players.                     |
-| Area Shape                                   | Sphere            | Shape of the trigger area.                        |
-| Area Color                                   | White             | Color of the trigger area.                        |
-| Sphere Radius (cm)                           | 50                | Radius of the sphere area in centimeters.         |
-| Check Interval (s)                           | 0.1               | Interval for checking conditions in seconds.      |
-| Trigger Type                                 | Both              | Type of trigger (Enter, Exit, or Both).           |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Options | All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Area Shape                                   | Sphere            | Option | Sphere, Box | Shape of the trigger area.                        |
+| Area Color                                   | White             | Options | None, White, Black, Red, Green, Blue, Yellow, Cyan, Magenta, Orange, Purple, Turquoise, Silver, Emerald | Color of the trigger area.                        |
+| Sphere Radius (cm)                           | 50                | Number | 0-100000 | Radius of the sphere area in centimeters.         |
+| Area Size                           | X:50, Y:50, Z:50                 | Vector | 0-100000 per axis | Set size of a box-sized area.         |
+| Check Interval (s)                           | 0.1               | Number | 0.1-3600 | Interval for checking conditions in seconds.      |
+| Trigger Type                                 | Both              | Options | On Enter, On Exit, Both | Type of trigger (Enter, Exit, or Both).           |
 
-# Trigger
+## Trigger
 
 | Trigger                | Description                                                        |
 |------------------------|--------------------------------------------------------------------|
@@ -30,7 +32,7 @@ Triggers when conditions are met within a designated area.
 | On Deactivate Device   | Triggered when the device is deactivated.                          |
 | On Activate Device     | Triggered when the device is activated.                            |
 
-# Action
+## Action
 
 | Action                | Description                                                        |
 |-----------------------|--------------------------------------------------------------------|

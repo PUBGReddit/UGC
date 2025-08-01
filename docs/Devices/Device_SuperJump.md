@@ -8,11 +8,11 @@ Enable players to jump higher via jump pads.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| Upward Speed Ratio                           | 200               | The ratio of upward speed applied to the jump.    |
-| Type                                         | Caller Up         | The type of jump applied.                         |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| Upward Speed Ratio                           | 200               | Number | 1-1000 | Set the ratio for the upward jump speed provided by the jump pad.    |
+| Type                                         | Caller Up         | Options | Caller Up, Reflect | Set the behavior type of the jump pad. Caller Up: Launches the calling player upward. Reflect: Reflects the player's direction based on the incoming velocity. |
 
 ## Trigger
 

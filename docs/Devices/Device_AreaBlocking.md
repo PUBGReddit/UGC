@@ -8,14 +8,14 @@ Block area to restrict player movement.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| Block Throwables                             | False             | Blocks throwable items from entering the area.    |
-| Blue Effect                                  | False             | Enables a blue visual effect in the blocked area. |
-| Block Area                                   | False             | Enables area blocking.                           |
-| Block Area Shape                             | Box               | Shape of the blocked area.                        |
-| Block Area Size                              | X: 50, Y: 50, Z: 50 | Size of the blocked area in centimeters.         |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| Block Throwables                             | False             | Boolean | True, False | Blocks throwable items from entering the area.    |
+| Blue Effect                                  | False             | Boolean | True, False | Enables a blue visual effect in the blocked area. |
+| Block Area                                   | False             | Boolean | True, False | Enables area blocking.                           |
+| Block Area Shape                             | Box               | Option | Box, Sphere | Shape of the blocked area.                        |
+| Block Area Size                              | X: 50, Y: 50, Z: 50 | Vector | 0-100000 per axis | Size of the blocked area in centimeters.         |
 
 ## Trigger
 

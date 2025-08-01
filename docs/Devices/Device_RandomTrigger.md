@@ -8,10 +8,10 @@ Execute a trigger randomly from a predetermined list.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| Target Count                                 | 1                 | Number of targets to trigger randomly.            |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| Target Count                                 | 1                 | Number | 1-100000 | Number of targets to trigger randomly.            |
 
 ## Trigger
 

@@ -8,23 +8,23 @@ Create a damaged zone that shrinks over time.
 
 ## Basic
 
-| Setting | Default Value | Description |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation | The phase when the device is activated. |
-| Blue Zone Shape | Circle | The shape of the blue zone. |
-| Blue Zone Options | See below | Array of options for each blue zone phase. |
+| Setting | Default Value | Type | Range | Description |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation | Option | | The phase when the device is activated. |
+| Blue Zone Shape | Circle | Option | Circle, Rectangle | The shape of the blue zone. |
+| Blue Zone Options | See below | Array | 0-10 Blue Zone Options| Array of options for each blue zone phase. |
 
 ### Blue Zone Options
 
-| Option                | Default Value | Description |
-|-----------------------|---------------|--------------------------------------------------|
-| Start Delay (s)       | 60            | Delay before the blue zone starts. |
-| Warning Duration (s)  | 60            | Duration of the warning before shrinking. |
-| Shrink Duration (s)   | 120           | Duration of the shrinking phase. |
-| Damage per Second     | 2             | Damage dealt per second inside the blue zone. |
-| Shrink Ratio          | 0.6           | Ratio to shrink the blue zone. |
-| Expand Ratio          | 0.56          | Ratio to expand the blue zone. |
-| Land Probability      | 70            | Probability of landing in the blue zone. |
+| Option                | Default Value | Type | Range | Description |
+|-----------------------|---------------|------|-------|--------------------------------------------------|
+| Start Delay (s)       | 60            | Number | 0-300 | Delay before the blue zone starts. |
+| Warning Duration (s)  | 60            | Number | 0-300 | Duration of the warning before shrinking. |
+| Shrink Duration (s)   | 120           | Number | 0-300 | Duration of the shrinking phase. |
+| Damage per Second     | 2             | Number | 0-100 | Damage dealt per second inside the blue zone. |
+| Shrink Ratio          | 0.6           | Number | 0-0.99 | Ratio to shrink the blue zone. |
+| Expand Ratio          | 0.56          | Number | 0-15 | Ratio to expand the blue zone. |
+| Land Probability      | 70            | Number | 0-100 | Probability of landing in the blue zone. |
 
 ## Trigger
 

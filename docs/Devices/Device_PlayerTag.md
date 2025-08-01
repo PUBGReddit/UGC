@@ -8,11 +8,11 @@ Apply and remove player tags.
 
 ## Basic
 
-| Setting            | Default Value      | Description                       |
-|--------------------|-------------------|-----------------------------------|
-| [Activation Phase](Common_Device_Settings.md#activation-phase)         | Device Creation | The phase when the device is activated. |
-| [Target](../General/Common_Device_Settings.md#target)                     | Activation Team        | Specifies the target players.                     |
-| Tag                |                   | The tag to apply or remove.       |
+| Setting            | Default Value      | Type | Range | Description                       |
+|--------------------|-------------------|------|-------|-----------------------------------|
+| [Activation Phase](Common_Device_Settings.md#activation-phase)         | Device Creation | Option | | The phase when the device is activated. |
+| [Target](../General/Common_Device_Settings.md#target)                     | Activation Team        | Option | Activating Team, Activating Player, All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Tag                |                   | Text | | The tag to apply or remove.       |
 
 ## Trigger
 

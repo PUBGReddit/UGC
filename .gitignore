@@ -7,3 +7,6 @@ build/
 .github/prompts/
 AI Optimized Documentation.md
 Combined_Documentation.md
+src/
+logicDesigner/
+.vscode/

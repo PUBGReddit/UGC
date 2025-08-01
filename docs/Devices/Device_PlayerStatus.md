@@ -8,19 +8,19 @@ Set or change player statuses.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Specifies the target players.                     |
-| Health                                       | 100               | Sets the player's health.                         |
-| Max Health                                   | 100               | Sets the player's maximum health.                 |
-| Show Health Bar Text                         | False             | Shows health bar text if checked.                 |
-| God Mode                                     | False             | Enables god mode if checked.                      |
-| Use Fall Damage                              | True              | Enables fall damage if checked.                   |
-| Character Scale                              | 100               | Sets the player's character scale.                |
-| Gravity Ratio                                | 100               | Sets the player's gravity ratio.                  |
-| Jump Ratio                                   | 100               | Sets the player's jump ratio.                     |
-| Speed Ratio                                  | 100               | Sets the player's speed ratio.                    |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Options | Activating Team, Activating Player, All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Health                                       | 100               | Number | 1-1000000 | Sets the player's health.                         |
+| Max Health                                   | 100               | Number | 1-1000000 | Sets the player's maximum health.                 |
+| Show Health Bar Text                         | False             | Boolean | True, False | Shows health bar text if checked.                 |
+| God Mode                                     | False             | Boolean | True, False | Enables god mode if checked.                      |
+| Use Fall Damage                              | True              | Boolean | True, False | Enables fall damage if checked.                   |
+| Character Scale                              | 100               | Number | 50-150 | Sets the player's character scale.                |
+| Gravity Ratio                                | 100               | Number | 10-200 | Sets the player's gravity ratio.                  |
+| Jump Ratio                                   | 100               | Number | 10-200 | Sets the player's jump ratio.                     |
+| Speed Ratio                                  | 100               | Number | 10-200 | Sets the player's speed ratio.                    |
 
 ## Trigger
 

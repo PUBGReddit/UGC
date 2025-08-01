@@ -8,11 +8,11 @@ Teleports players or objects to a specific location.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | Activating Player  | Specifies the target player.                      |
-| Visualization Color                          | White             | The color used for device visualization.          |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | Activating Player  | Options | Activating Player, Selected Player, Tagged Players | Specifies the target player.                      |
+| Visualization Color                          | White             | Options | None, White, Black, Red, Green, Blue, Yellow, Cyan, Magenta, Orange, Purple, Turquoise, Silver, Emerald | The color used for device visualization.          |
 
 ## Trigger
 

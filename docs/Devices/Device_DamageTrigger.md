@@ -12,16 +12,16 @@ Setup and use of this device seems to be broken at this time.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Specifies the target players.                     |
-| Damage Amount                                | 0                 | Amount of damage required to trigger.             |
-| Hit Count                                    | 0                 | Number of hits required to trigger.               |
-| Allowed Damage Types                         |   | Types of damage that can trigger the device.      |
-| Use Point Damage                             | True              | Allows point damage to trigger the device.        |
-| Use Radial Damage                            | True              | Allows radial damage to trigger the device.       |
-| Select Object                                | Cube              | The object to be damaged.                         |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Option | Activating Team, Activating Player, All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Damage Amount                                | 0                 | Number | 0-1000 | Amount of damage required to trigger.             |
+| Hit Count                                    | 0                 | Number | 0-100 | Number of hits required to trigger.               |
+| Allowed Damage Types                         |   | Multi-select | Damage_None, Damage_Instant, Damage_Gun, Damage_Melee, Damage_Punch, Damage_ZombiePunch, Damage_Groggy, Damage_BlueZone, Damage_VehicleHit, Damage_VehicleCrashHit, Damage_Molotov, Damage_Explosion, Damage_Explosion_Grenade, Damage_Explosion_RedZone, Damage_Explosion_Vehicle, Damage_Explosion_PlantedTimeBomb, Damage_Instant_Fall | Types of damage that can trigger the device.      |
+| Use Point Damage                             | True              | Boolean | True, False | Allows point damage to trigger the device.        |
+| Use Radial Damage                            | True              | Boolean | True, False | Allows radial damage to trigger the device.       |
+| Select Object                                | Cube              | Option | Cube, Cupboard, RedBall, RedLight, RangeTarget1, RangeTarget2, RangeTarget3, RangeTarget4, RangeTarget5, RangeTarget6, RangeTarget7 | The object to be damaged.                         |
 
 ## Trigger
 

@@ -12,12 +12,12 @@ Spawn and respawn players.
 
 ## Basic
 
-| Setting                        | Default Value     | Description                                      |
-|--------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Specifies the target players.                     |
-| Default Spawn Location         | Checked           | Whether this is the default spawn location.       |
-| Enemy Detection Range (cm)     | 0                 | Range to detect enemies near the spawn location.  |
+| Setting                        | Default Value     | Type | Range | Description                                      |
+|--------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | All Players        | Options | All Players, Selected Team, Selected Player, Tagged Players | Specifies the target players.                     |
+| Default Spawn Location         | Checked           | Boolean | True, False | Whether this is the default spawn location.       |
+| Enemy Detection Range (cm)     | 0                 | Number | 0-500000 | Range to detect enemies near the spawn location.  |
 
 ## Trigger
 

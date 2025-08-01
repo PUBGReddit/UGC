@@ -8,13 +8,11 @@ Deal damage to players.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| [Target](../General/Common_Device_Settings.md#target)                     | Selected Player    | Specifies the target player.                      |
-| Team ID                                      | 1                 | The team ID of the target player.                 |
-| Team Member ID                               | 1                 | The team member ID of the target player.          |
-| Damage Amount                                | 10                | Amount of damage dealt to the player.             |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | | | The phase when the device is activated.           |
+| [Target](../General/Common_Device_Settings.md#target)                     | Selected Player    | Options | Activating Team, Activating Player, All Players, Selected Team, Selected Player, Tagged Players | Specifies the target player.                      |
+| Damage Amount                                | 10                | Number | 0-1000000 | Amount of damage dealt to the player.             |
 
 ## Trigger
 

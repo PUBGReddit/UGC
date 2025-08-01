@@ -9,10 +9,10 @@ The Round Event Device automaticly sends out a trigger based on the setting Send
 
 ## Basic
 
-| Setting                        | Default Value                | Description                                      |
-|--------------------------------|------------------------------|--------------------------------------------------|
-| Send Round Event               | Round Start After Spawn      | Determine whether this device sends out a round event. Options: Standby Before Spawn - Activates during the standby phase before players spawn; Standby After Spawn - Activates during the standby phase after players spawn; Round Start Before Spawn - Activates at round start, before players spawn; Round Start After Spawn - Activates at round start, after players spawn; Round Start After Delay - Activates after a delay following the round start; Round End - Activates when the round ends. |
-| Specific Round                 | All Rounds                   | Specifies which round(s) the event applies to.    |
+| Setting                        | Default Value                | Type | Range | Description                                      |
+|--------------------------------|------------------------------|------|-------|--------------------------------------------------|
+| Send Round Event               | Round Start After Spawn      | Option | Standby Before Spawn, Standby After Spawn, Round Start Before Spawn, Round Start After Spawn, Round Start After Delay, Round End | Determine whether this device sends out a round event. |
+| Specific Round                 | All Rounds                   | Option | All Rounds, Specific Round | Specifies which round(s) the event applies to.    |
 
 ## Trigger
 

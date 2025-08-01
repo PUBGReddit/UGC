@@ -7,16 +7,18 @@
 Spawn AirDrop items at a specific location.
 
 ## Basic
-| Setting                  | Default Value | Description |
-|--------------------------|---------------|-------------|
-| [Activation Phase](Common_Device_Settings.md#activation-phase)         | Device Creation | The phase when the device is activated. |
-| Items                    |               | Items to be dropped. |
-| Drop Location Type       | Center        | Type of drop location. |
-| Random X Offset Range    | 0             | Range for random X offset. |
-| Random Y Offset Range    | 0             | Range for random Y offset. |
-| Flight Time to Drop Location | 10        | Time for air drop to reach location. |
+
+| Setting                  | Default Value | Type | Range | Description |
+|--------------------------|---------------|------|------|-------------|
+| [Activation Phase](Common_Device_Settings.md#activation-phase)         | Device Creation | Options | | The phase when the device is activated. |
+| Items                    |               | Item Selector| All| Items to be dropped. |
+| Drop Location Type       | Center        | Option | Center, Device | Type of drop location. |
+| Random X Offset Range    | 0             | Number | 0 - 100000 | Range for random X offset. |
+| Random Y Offset Range    | 0             | Number | 0 - 100000 | Range for random Y offset. |
+| Flight Time to Drop Location | 10        | Number | 1 - 3600 | Time for air drop to reach location. |
 
 ## Trigger
+
 | Trigger                | Description |
 |------------------------|-------------|
 | On Air Drop            | Triggered when air drop occurs. |
@@ -24,6 +26,7 @@ Spawn AirDrop items at a specific location.
 | On Activate Device     | Triggered when the device is activated. |
 
 ## Action
+
 | Action                | Description |
 |-----------------------|-------------|
 | Air Drop              | Initiates air drop. |

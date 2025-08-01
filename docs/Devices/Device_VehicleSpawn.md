@@ -16,17 +16,17 @@ Vehicles do not get spawned on Device Activation. They require an external trigg
 
 ## Basic
 
-| Setting                                                      | Default Value     | Description                                                                 |
-|--------------------------------------------------------------|-------------------|-----------------------------------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.                                      |
-| Spawn Vehicle                                                | UAZ               | Type of vehicle to spawn.                                                    |
-| Vehicle Health                                               | 3000              | Initial health of the spawned vehicle.                                       |
-| Remove on Destruction                                        | True              | Removes the vehicle when destroyed.                                          |
-| Use Fuel                                                     | True              | Enables fuel usage for the vehicle.                                          |
-| Initial Fuel                                                 | 50                | Amount of fuel when spawned.                                                 |
-| Use Auto Respawn                                             | False             | Automatically respawns the vehicle when destroyed.                           |
-| Area Shape                                                   | Sphere            | Shape of the spawn area.                                                     |
-| Area Size                                                    | 50                | Size of the spawn area.                                                      |
+| Setting                                                      | Default Value     | Type | Range | Description                                                                 |
+|--------------------------------------------------------------|-------------------|------|-------|-----------------------------------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.                                      |
+| Spawn Vehicle                                                | UAZ               | Option | UAZ, Dacia, Buggy, CoupeRB, Motorbike, PickupTruck, Mirado, MiniBus, Dirtbike, PonyCoupe, Porter, Jima, Rony, Pillar_Car, Food_Truck, Blanc, PicoBus, AquaRail, Boat, Motorglider, Bicycle | Type of vehicle to spawn.                                                    |
+| Vehicle Health                                               | 3000              | Number | 1-5000 | Initial health of the spawned vehicle.                                       |
+| Remove on Destruction                                        | True              | Boolean | True, False | Removes the vehicle when destroyed.                                          |
+| Use Fuel                                                     | True              | Boolean | True, False | Enables fuel usage for the vehicle.                                          |
+| Initial Fuel                                                 | 50                | Number | 0-100 | Amount of fuel when spawned.                                                 |
+| Use Auto Respawn                                             | False             | Boolean | True, False | Automatically respawns the vehicle when destroyed.                           |
+| Area Shape                                                   | Sphere            | Option | Sphere | Shape of the spawn area.                                                     |
+| Area Size                                                    | 50                | Number | 0-100000 | Size of the spawn area.                                                      |
 
 ## Trigger
 

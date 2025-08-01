@@ -8,11 +8,11 @@ Set an in-game timer next to an item.
 
 ## Basic
 
-| Setting                                      | Default Value     | Description                                      |
-|----------------------------------------------|-------------------|--------------------------------------------------|
-| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | The phase when the device is activated.           |
-| Interval (s)                                 | 1                 | The interval in seconds for the timer.            |
-| Repeat Count                                 | 1                 | Number of times the timer repeats.                |
+| Setting                                      | Default Value     | Type | Range | Description                                      |
+|----------------------------------------------|-------------------|------|-------|--------------------------------------------------|
+| [Activation Phase](../General/Common_Device_Settings.md#activation-phase) | Device Creation    | Option | | The phase when the device is activated.           |
+| Interval (s)                                 | 1                 | Number | 1-5400 | The interval in seconds for the timer.            |
+| Repeat Count                                 | 1                 | Number | 0-999 | Number of times the timer repeats.                |
 
 ## Trigger
 
