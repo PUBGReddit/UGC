@@ -1,6 +1,6 @@
 # Player Icon Device
 
-![PlayerIcon Icon](../images/DeviceIcons/Device_PlayerIcon.png)
+![PlayerIcon Icon](../.images/DeviceIcons/Device_PlayerIcon.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Player Status Device
 
-![PlayerStatus Icon](../images/DeviceIcons/Device_PlayerStatus.png)
+![PlayerStatus Icon](../.images/DeviceIcons/Device_PlayerStatus.png)
 
 ## Description
 

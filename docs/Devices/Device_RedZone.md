@@ -1,6 +1,6 @@
 # Red Zone Device
 
-![RedZone Icon](../images/DeviceIcons/Device_RedZone.png)
+![RedZone Icon](../.images/DeviceIcons/Device_RedZone.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Conquest Area Device
 
-![ConquestArea Icon](../images/DeviceIcons/Device_ConquestArea.png)
+![ConquestArea Icon](../.images/DeviceIcons/Device_ConquestArea.png)
 
 ## Description
 

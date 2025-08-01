@@ -1,6 +1,6 @@
 # Special Zone Device
 
-![SpecialZone Icon](../../images/DeviceIcons/Device_SpecialZone.png)
+![SpecialZone Icon](../.images/DeviceIcons/Device_SpecialZone.png)
 
 ## Description
 

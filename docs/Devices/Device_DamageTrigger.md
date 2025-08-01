@@ -1,6 +1,6 @@
 # Damage Trigger Device
 
-![DamageTrigger Icon](../images/DeviceIcons/Device_DamageTrigger.png)
+![DamageTrigger Icon](../.images/DeviceIcons/Device_DamageTrigger.png)
 
 ## Description
 

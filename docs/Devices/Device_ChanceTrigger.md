@@ -1,6 +1,6 @@
 # Chance Trigger Device
 
-![ChanceTrigger Icon](../images/DeviceIcons/Device_ChanceTrigger.png)
+![ChanceTrigger Icon](../.images/DeviceIcons/Device_ChanceTrigger.png)
 
 ## Description
 

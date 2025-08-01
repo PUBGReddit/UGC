@@ -1,6 +1,6 @@
 # Teleport Device
 
-![Teleport Icon](../images/DeviceIcons/Device_Teleport.png)
+![Teleport Icon](../.images/DeviceIcons/Device_Teleport.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Random Trigger Device
 
-![RandomTrigger Icon](../images/DeviceIcons/Device_RandomTrigger.png)
+![RandomTrigger Icon](../.images/DeviceIcons/Device_RandomTrigger.png)
 
 ## Description
 

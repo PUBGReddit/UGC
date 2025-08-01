@@ -1,6 +1,6 @@
 # Player Damage Device
 
-![PlayerDamage Icon](../../images/DeviceIcons/Device_PlayerDamage.png)
+![PlayerDamage Icon](../.images/DeviceIcons/Device_PlayerDamage.png)
 
 ## Description
 

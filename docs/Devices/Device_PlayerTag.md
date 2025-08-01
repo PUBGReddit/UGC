@@ -1,6 +1,6 @@
 # Player Tag Device
 
-![PlayerTag Icon](../../images/DeviceIcons/Device_PlayerTag.png)
+![PlayerTag Icon](../.images/DeviceIcons/Device_PlayerTag.png)
 
 ## Description
 

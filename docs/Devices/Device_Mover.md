@@ -1,6 +1,6 @@
 # Mover Device
 
-![Mover Icon](../images/DeviceIcons/Device_Mover.png)
+![Mover Icon](../.images/DeviceIcons/Device_Mover.png)
 
 ## Description
 

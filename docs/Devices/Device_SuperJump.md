@@ -1,6 +1,6 @@
 # Super Jump Device
 
-![SuperJump Icon](../images/DeviceIcons/Device_SuperJump.png)
+![SuperJump Icon](../.images/DeviceIcons/Device_SuperJump.png)
 
 ## Description
 

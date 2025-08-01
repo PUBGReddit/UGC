@@ -1,6 +1,6 @@
 # Timer Device
 
-![Timer Icon](../images/DeviceIcons/Device_Timer.png)
+![Timer Icon](../.images/DeviceIcons/Device_Timer.png)
 
 ## Description
 

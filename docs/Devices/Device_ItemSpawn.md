@@ -1,6 +1,6 @@
 # Item Spawn Device
 
-![ItemSpawn Icon](../images/DeviceIcons/Device_ItemSpawn.png)
+![ItemSpawn Icon](../.images/DeviceIcons/Device_ItemSpawn.png)
 
 ## Description
 

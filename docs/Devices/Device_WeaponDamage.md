@@ -1,6 +1,6 @@
 # Weapon Damage Device
 
-![WeaponDamage Icon](../images/DeviceIcons/Device_WeaponDamage.png)
+![WeaponDamage Icon](../.images/DeviceIcons/Device_WeaponDamage.png)
 
 ## Description
 

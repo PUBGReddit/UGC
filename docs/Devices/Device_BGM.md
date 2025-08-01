@@ -1,6 +1,6 @@
 # BGM Device
 
-![BGM Icon](../images/DeviceIcons/Device_BGM.png)
+![BGM Icon](../.images/DeviceIcons/Device_BGM.png)
 
 ## Description
 

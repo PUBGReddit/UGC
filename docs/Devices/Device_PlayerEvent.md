@@ -1,6 +1,6 @@
 # Player Event Device
 
-![PlayerEvent Icon](../images/DeviceIcons/Device_PlayerEvent.png)
+![PlayerEvent Icon](../.images/DeviceIcons/Device_PlayerEvent.png)
 
 ## Description
 

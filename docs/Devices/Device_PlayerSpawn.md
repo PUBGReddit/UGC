@@ -1,6 +1,6 @@
 # Player Spawn Device
 
-![PlayerSpawn Icon](../images/DeviceIcons/Device_PlayerSpawn.png)
+![PlayerSpawn Icon](../.images/DeviceIcons/Device_PlayerSpawn.png)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Air Drop Device
 
-![AirDrop Icon](../images/DeviceIcons/Device_AirDrop.png)
+![AirDrop Icon](../.images/DeviceIcons/Device_AirDrop.png)
 
 ## Description
 

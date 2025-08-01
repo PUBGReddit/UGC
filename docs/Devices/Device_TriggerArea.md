@@ -1,6 +1,6 @@
 # TriggerArea Device
 
-![TriggerArea Icon](../images/DeviceIcons/Device_TriggerArea.png)
+![TriggerArea Icon](../.images/DeviceIcons/Device_TriggerArea.png)
 
 ## Name
 
