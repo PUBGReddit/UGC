@@ -1,4 +1,4 @@
-# How to load and play a downloaded `.pubc` File
+# How to load and play a downloaded `.pubc` file
 After **Downloading** the `.pugc` file you wish to play, you will need to store the file in the correct folder.
 Follow one of these 2 options
  1. In-Game

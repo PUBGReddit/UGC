@@ -1,12 +1,13 @@
-# MAPNAME
+# Wild West
 
 ## Description
 
-TBD
+A small Wild Wild West inspired town
+
 ## Game Info
 
-- Game Type: **Undefined**
-- Players: **0-10**
+- Game Type: **Multi-GameModes**
+- Players: **0-20**
 - Duration: **Undefined**
 
 ## Download
@@ -17,9 +18,11 @@ Click [here]() to download the UGC file.
 
 ## Additional Notes
 
-None
+This map uses the Multi-GameModes setup, read the instructions to configure which GameMode is played.
 
 ## Creator(s)
+
+Delzaugh & Xenny
 
 ---
 
