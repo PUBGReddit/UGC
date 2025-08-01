@@ -3,7 +3,10 @@
 <MudThemeProvider Theme="@_theme" IsDarkMode="_isDarkMode" />
 <MudLayout>
     <MudAppBar Elevation="1">
-        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
+        <MudText Typo="Typo.h5" Class="ml-3">PUBG Application</MudText>
+        <MudSpacer />
+        <MudIconButton Icon="@DarkLightModeButtonIcon" Color="Color.Inherit" Edge="Edge.End" OnClick="@DarkModeToggle" />
     </MudAppBar>
     <MudDrawer id="nav-drawer" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu />
@@ -43,41 +46,51 @@
 
     private readonly PaletteLight _lightPalette = new()
     {
-        Black = "#110e2d",
-        AppbarText = "#424242",
-        AppbarBackground = "rgba(255,255,255,0.8)",
-        DrawerBackground = "#ffffff",
-        GrayLight = "#e8e8e8",
+        Primary = "#F2A900", // PUBG Orange
+        Secondary = "#A69B98", // PUBG Tan
+        Tertiary = "#8A7353", // PUBG Green
+        Black = "#000000", // PUBG Black
+        AppbarText = "#222222", // PUBG Gray
+        AppbarBackground = "rgba(255,255,255,0.9)",
+        DrawerBackground = "#FFFFFF", // PUBG White
+        GrayLight = "#A69B98", // PUBG Tan (lighter shade)
         GrayLighter = "#f9f9f9",
+        Background = "#FFFFFF", // PUBG White
+        Info = "#4a86ff",
+        Success = "#8A7353", // PUBG Green
+        Warning = "#F2A900", // PUBG Orange
+        Error = "#ff3f5f",
     };
 
     private readonly PaletteDark _darkPalette = new()
     {
-        Primary = "#7e6fff",
-        Surface = "#1e1e2d",
-        Background = "#1a1a27",
-        BackgroundGray = "#151521",
-        AppbarText = "#92929f",
-        AppbarBackground = "rgba(26,26,39,0.8)",
-        DrawerBackground = "#1a1a27",
-        ActionDefault = "#74718e",
-        ActionDisabled = "#9999994d",
-        ActionDisabledBackground = "#605f6d4d",
-        TextPrimary = "#b2b0bf",
-        TextSecondary = "#92929f",
-        TextDisabled = "#ffffff33",
-        DrawerIcon = "#92929f",
-        DrawerText = "#92929f",
-        GrayLight = "#2a2833",
-        GrayLighter = "#1e1e2d",
+        Primary = "#F2A900", // PUBG Orange
+        Secondary = "#A69B98", // PUBG Tan
+        Tertiary = "#8A7353", // PUBG Green
+        Surface = "#000000", // PUBG Black
+        Background = "#222222", // PUBG Gray
+        BackgroundGray = "#333333", // Slightly lighter than PUBG Gray
+        AppbarText = "#FFFFFF", // PUBG White
+        AppbarBackground = "rgba(0,0,0,0.9)", // PUBG Black with transparency
+        DrawerBackground = "#222222", // PUBG Gray
+        ActionDefault = "#A69B98", // PUBG Tan
+        ActionDisabled = "#A69B9866", // PUBG Tan with transparency
+        ActionDisabledBackground = "#8A73534d", // PUBG Green with transparency
+        TextPrimary = "#FFFFFF", // PUBG White
+        TextSecondary = "#A69B98", // PUBG Tan
+        TextDisabled = "#FFFFFF33", // PUBG White with transparency
+        DrawerIcon = "#F2A900", // PUBG Orange
+        DrawerText = "#FFFFFF", // PUBG White
+        GrayLight = "#333333", // Darker than PUBG Gray
+        GrayLighter = "#222222", // PUBG Gray
         Info = "#4a86ff",
-        Success = "#3dcb6c",
-        Warning = "#ffb545",
+        Success = "#8A7353", // PUBG Green
+        Warning = "#F2A900", // PUBG Orange
         Error = "#ff3f5f",
-        LinesDefault = "#33323e",
-        TableLines = "#33323e",
-        Divider = "#292838",
-        OverlayLight = "#1e1e2d80",
+        LinesDefault = "#444444", // Lighter than PUBG Gray
+        TableLines = "#444444", // Lighter than PUBG Gray
+        Divider = "#333333", // Darker than PUBG Gray
+        OverlayLight = "#22222280", // PUBG Gray with transparency
     };
 
     public string DarkLightModeButtonIcon => _isDarkMode switch
