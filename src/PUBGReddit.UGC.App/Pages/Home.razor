@@ -3,25 +3,29 @@
 @using PUBGReddit.UGC.App.Models
 @using MudBlazor
 
-<MudTextField @bind-Value="searchQuery" Placeholder="Search maps..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Class="mb-4" />
+<MudDrawer Open="true" Anchor="Anchor.Left" Elevation="1" Style="width: 300px;"  Variant="@DrawerVariant.Persistent" ClipMode="DrawerClipMode.Always">
+    <MudPaper Elevation="0" Class="pa-3">
+        <MudTextField @bind-Value="searchQuery" Placeholder="Search maps..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Class="mb-4" />
 
-<MudSelect T="string" @bind-Value="selectedTag" Placeholder="Filter by tag" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.FilterList" Class="mb-4">
-    @foreach (var tag in Tags)
-    {
-        <MudSelectItem Value="@tag">@tag</MudSelectItem>
-    }
-</MudSelect>
+        <MudSelect T="string" @bind-Value="selectedTag" Placeholder="Filter by tag" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.FilterList" Class="mb-4">
+            @foreach (var tag in Tags)
+            {
+                <MudSelectItem Value="@tag">@tag</MudSelectItem>
+            }
+        </MudSelect>
 
-<div class="pagination-controls" Style="text-align: center; margin-bottom: 20px;">
-    <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Color="Color.Primary" @onclick="PreviousPage" Disabled="@IsFirstPage" />
-    <span style="margin: 0 10px;">Page @CurrentPage of @TotalPages</span>
-    <MudIconButton Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Primary" @onclick="NextPage" Disabled="@IsLastPage" />
-</div>
+        <div class="pagination-controls" Style="text-align: center; margin-top: 20px;">
+            <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Color="Color.Primary" @onclick="PreviousPage" Disabled="@IsFirstPage" />
+            <span style="margin: 0 10px;">Page @CurrentPage of @TotalPages</span>
+            <MudIconButton Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Primary" @onclick="NextPage" Disabled="@IsLastPage" />
+        </div>
+    </MudPaper>
+</MudDrawer>
 
-<MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center" Spacing="4" Style="margin: auto; max-width: 90%;">
+<MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center" Spacing="4" Style="margin: auto; max-width: 90%; ">
     @foreach (var map in PagedMaps)
     {
-        <MudItem xs="12" sm="4" md="2" Style="max-width: 500px;">
+        <MudItem xs="12" sm="6" md="4">
             <MudCard>
                   <MudCardHeader>
                     <CardHeaderContent>
