@@ -5,12 +5,11 @@ namespace PUBGReddit.UGC.App.Pages;
 
 public class BotAnswerNode : NodeModel
 {
-    public BotAnswerNode(Point position = null) : base(position) { }
+    public BotAnswerNode(Point position, string deviceType) : base(position) { DeviceType = deviceType; }
 
-    public string Answer { get; set; }
+    public string DeviceType { get; private set; }
+
 }
-
-
 public class DevicePort : PortModel
 {
     public DevicePort(NodeModel parent, PortAlignment alignment, string label) : base(parent, alignment, null, null)

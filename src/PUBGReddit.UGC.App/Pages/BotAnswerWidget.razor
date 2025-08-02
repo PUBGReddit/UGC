@@ -66,7 +66,7 @@
                 </div>
       
         </div>
-            <h5 class="device-title">@DeviceType</h5>
+            <h5 class="device-title">@Node.DeviceType</h5>
 
     </div>
 
@@ -75,24 +75,14 @@
 @code {
     [Parameter]
     public required BotAnswerNode Node { get; set; }
-    string? DeviceType; 
+
+    
     string? svgContent; 
     protected override async Task OnInitializedAsync()
 {
-    // Get all device types from the enum
-    var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
-    
-    // Generate a random index
-    var random = new Random();
-    var randomIndex = random.Next(0, deviceTypes.Length);
-    
-    // Get a random device type
-    DeviceType = deviceTypes[randomIndex].ToString();
-    
-    // Convert the enum value to a file name
-    var selectedFile = $"{DeviceType}.svg";
+
     
     // Load the SVG content
-    svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");
+    svgContent = await Http.GetStringAsync($"images/DeviceSVG/{Node.DeviceType}.svg");
 } 
 }

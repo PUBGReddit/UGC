@@ -4,6 +4,7 @@
 @using Blazor.Diagrams.Core.Geometry
 @using Blazor.Diagrams.Core.Models
 @using MudBlazor
+@using PUBG.Reddit.UGC.Models
 @using MudBlazor.Utilities
 @using Blazor.Diagrams.Components
 @using Blazor.Diagrams.Components.Widgets
@@ -21,7 +22,17 @@
 
     private BotAnswerNode NewNode(double x, double y)
     {
-        var node = new BotAnswerNode(new Point(x, y)); 
+        // Get all device types from the enum
+        var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
+
+        // Generate a random index
+        var random = new Random();
+        var randomIndex = random.Next(0, deviceTypes.Length);
+
+        // Get a random device type
+        var DeviceType = deviceTypes[randomIndex].ToString();
+
+        var node = new BotAnswerNode(new Point(x, y), DeviceType);
         node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 1"));
         node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 2"));
         node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 3"));
