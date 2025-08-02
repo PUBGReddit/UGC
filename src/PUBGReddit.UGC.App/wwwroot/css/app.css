@@ -165,7 +165,10 @@ code {
  
 .diagram-container {
     width: 100%;
-    height: calc(100% - 52px);
-    border: 1px solid black; /* Just visual */
+    height: calc(100%);    
+    background-color: Rgb(255 255 255 / 75%);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    /* height: calc(100% - 52px); */
 
 }
