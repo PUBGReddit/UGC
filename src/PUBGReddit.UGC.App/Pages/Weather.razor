@@ -1,37 +1,48 @@
 @page "/weather"
-@inherits WeatherComponent
-@inject LayoutData LayoutData
+ 
+@using Blazor.Diagrams
+@using Blazor.Diagrams.Core.Geometry
+@using Blazor.Diagrams.Core.Models
 @using MudBlazor
 @using MudBlazor.Utilities
 @using Blazor.Diagrams.Components
 @using Blazor.Diagrams.Components.Widgets
-
- 
- <div class="diagram-container">
-<CascadingValue Value="BlazorDiagram">
-    <DiagramCanvas>
-        <Widgets>
-            <NavigatorWidget Width="200"
-                             Height="150"
-                             Style="position: absolute; bottom: 15px; right: 15px; border: 1px solid black; background-color: black;">
-            </NavigatorWidget>
-            <SelectionBoxWidget/>
-        </Widgets>
-    </DiagramCanvas>
-</CascadingValue>
- </div>
+@using PUBGReddit.UGC.App.Layout
 
 @code {
-    private bool _zoomEnabled = true;
-    private bool _panningEnabled = true;
-    private bool _virtualizationEnabled = true;
-
     protected override void OnInitialized()
     {
         base.OnInitialized();
-
-        LayoutData.Title = "PUBG UGC Diagram";
-        LayoutData.Info = "Device connection diagram using MudBlazor components.";
-        LayoutData.DataChanged();
+        BlazorDiagram.RegisterComponent<BotAnswerNode, BotAnswerWidget>();
+ 
+        BlazorDiagram.Nodes.Add(new[] {   NewNode(100, 100), NewNode(300, 300) });
+         
     }
+
+    private BotAnswerNode NewNode(double x, double y)
+    {
+        var node = new BotAnswerNode(new Point(x, y)); 
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 1"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 2"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 3"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Trigger 4"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Action 1"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Action 2"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Action 3"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Action 4"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Action 5")); 
+
+         
+        return node;
+    }
+
+
+    protected readonly BlazorDiagram BlazorDiagram = new BlazorDiagram();
+
 }
+
+<CascadingValue Value="BlazorDiagram">
+    <DiagramCanvas></DiagramCanvas>
+</CascadingValue>
+
+ 

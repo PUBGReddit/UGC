@@ -6,6 +6,7 @@ namespace PUBGReddit.UGC.App.DiagramWidget;
 public class AirDropNode : SvgNodeModel
 {
     public AirDropNode(Point? position = null) : base(position) { }
+    public string Answer { get; set; }
 
     // Here, you can put whatever you want
 }

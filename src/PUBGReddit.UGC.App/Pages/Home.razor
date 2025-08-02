@@ -1,9 +1,88 @@
-@page "/"
-@using System.Net
-@using System.Text.RegularExpressions
-@using PUBGReddit.UGC.App.DiagramWidget
-@inject IHttpClientFactory ClientFactory
- 
-<MudIcon Icon="@Icons.Material.Filled.AddCircle" Title="Add" />
-<MudIcon Icon="@DeviceIcons.AirDrop" Title="Add" />
-<img src="images/RandomTrigger.svg" alt="AirDrop Icon" />
+﻿@page "/"
+@using Blazor.Diagrams
+@using Blazor.Diagrams.Components
+@using Blazor.Diagrams.Core.Geometry
+@using Blazor.Diagrams.Core.Models
+
+<PageTitle>Home</PageTitle>
+<MudDrawer @bind-Open="@_open" Elevation="0" Variant="@DrawerVariant.Persistent"
+    ClipMode="DrawerClipMode.Always">
+     <MudPaper Elevation="0" Class="pa-3">
+            <MudTextField @bind-Value="searchDevices" Placeholder="Search devices..." 
+                         Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" />
+        </MudPaper>
+        <MudDivider />
+        <MudList Clickable="true" Dense="true" T="string">
+            <div class="text-center" draggable="true" @ondragstart="() => OnDragStart(0)">
+    <div style="pointer-events:none;">
+        <img class="d-block m-auto" src="_content/SharedDemo/img/DefaultNodeWidget.png"/>
+        <span>Default Node</span>
+    </div>
+</div>
+            <MudListSubheader>Player Devices</MudListSubheader>
+            <MudListItem @ondragstart="() => OnDragStart(0)" Icon="@Icons.Material.Filled.PersonPin" IconColor="Color.Primary">Player Spawn</MudListItem>
+            <MudListItem @ondragstart="() => OnDragStart(0)" Icon="@Icons.Material.Filled.EmojiEvents" IconColor="Color.Primary">Score Manager</MudListItem>
+            <MudListItem @ondragstart="() => OnDragStart(0)" Icon="@Icons.Material.Filled.LocalHospital" IconColor="Color.Primary">Player Damage</MudListItem>
+            
+            <MudListSubheader>Map Devices</MudListSubheader>
+            <MudListItem Icon="@Icons.Material.Filled.BlurCircular" IconColor="Color.Primary">Blue Zone</MudListItem>
+            <MudListItem Icon="@Icons.Material.Filled.BlurOn" IconColor="Color.Primary">Red Zone</MudListItem>
+            <MudListItem Icon="@Icons.Material.Filled.Block" IconColor="Color.Primary">Area Blocking</MudListItem>
+        </MudList>
+</MudDrawer>
+<div style="background-color: rgb(242,242,242, 70%); margin: 8px;width: 100%;height: 100%;" ondragover="event.preventDefault();" @ondragover:preventDefault @ondrop="OnDrop"> 
+<CascadingValue Value="BlazorDiagram" >
+    <DiagramCanvas  ></DiagramCanvas>
+</CascadingValue>
+</div>
+@code {
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        BlazorDiagram.RegisterComponent<BotAnswerNode, BotAnswerWidget>();
+
+        BlazorDiagram.Nodes.Add(new[] { NewNode(100, 100), NewNode(300, 300) });
+
+    }
+    
+    string searchDevices = "";
+    private bool _open = true;
+    private BotAnswerNode NewNode(double x, double y)
+    {
+        var node = new BotAnswerNode(new Point(x, y));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Trigger 1"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Trigger 2"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Trigger 3"));
+        node.AddPort(new DevicePort(node, PortAlignment.Right, "Trigger 4"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Action 1"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Action 2"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Action 3"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Action 4"));
+        node.AddPort(new DevicePort(node, PortAlignment.Left, "Action 5"));
+
+
+        return node;
+    }
+    private int? _draggedType;
+
+  private void OnDragStart(int key)
+  {
+      // Can also use transferData, but this is probably "faster"
+      _draggedType = key;
+  }
+
+  private void OnDrop(DragEventArgs e)
+  {
+      if (_draggedType == null) // Unkown item
+          return;
+
+      var position = BlazorDiagram.GetRelativeMousePoint(e.ClientX, e.ClientY);
+      var node = NewNode(position.X, position.Y);
+  
+      BlazorDiagram.Nodes.Add(node);
+      _draggedType = null;
+  }
+
+    protected readonly BlazorDiagram BlazorDiagram = new BlazorDiagram();
+
+}

@@ -1,46 +1,25 @@
-@using Blazor.Diagrams.Components.Renderers
-@using Blazor.Diagrams.Core.Models
-@using Blazor.Diagrams.Core.Models.Base
-@using PUBG.Reddit.UGC.Models
-@using PUBGReddit.UGC.App.DiagramWidget
-@using System
+<div class="custom-node @(Node.Selected ? " selected" : "")">
+    <div class="card" style="width: 250px;">
+        <div class="card-body">
+            <h5 class="card-title">Bot Answer</h5>
+            <div class="form-group">
+                <input type="text" class="form-control"
+                       @bind-value="Node.Answer"
+                       placeholder="Answer"
+                       @onpointerdown:stopPropagation
+                       @onpointerup:stopPropagation
+                       @onpointermove:stopPropagation />
+            </div>
+        </div>
+    </div>
 
-@inject HttpClient Http
-@inject IJSRuntime JS
-
-@((MarkupString)svgContent)
-<g>
- 
-<PortRenderer Port="Node.GetPort(PortAlignment.Left)">
-    <circle cx="0" cy="50" r="7"></circle>
-</PortRenderer>
-
-<PortRenderer Port="Node.GetPort(PortAlignment.Right)">
-    <circle cx="100" cy="50" r="7"></circle>
-</PortRenderer>
-</g>
+    @foreach (var port in Node.Ports)
+    {
+        <PortRenderer @key="port" Port="port"></PortRenderer>
+    }
+</div>
 
 @code {
-    // This gets filled by the library
-    [Parameter] public AirDropNode Node { get; set; } = null!;
-    string svgContent = string.Empty; 
-
-    protected override async Task OnInitializedAsync()
-    {
-        // Get all device types from the enum
-        var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
-        
-        // Generate a random index
-        var random = new Random();
-        var randomIndex = random.Next(0, deviceTypes.Length);
-        
-        // Get a random device type
-        var selectedDeviceType = deviceTypes[randomIndex];
-        
-        // Convert the enum value to a file name
-        var selectedFile = $"{selectedDeviceType}.svg";
-        
-        // Load the SVG content
-        svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");
-    }
+    [Parameter]
+    public AirDropNode Node { get; set; }
 }

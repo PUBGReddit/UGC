@@ -3,6 +3,7 @@
 @using PUBG.Reddit.UGC.Models
 @using PUBGReddit.UGC.App.DiagramWidget
 @inject HttpClient Http
+ 
 @((MarkupString)svgContent)
 <g>
  
@@ -13,11 +14,11 @@
 <PortRenderer Port="Node.GetPort(PortAlignment.Right)">
     <circle cx="100" cy="50" r="7"></circle>
 </PortRenderer>
-</g>
-
+</g> 
 @code {
     // This gets filled by the library
     [Parameter] public DeviceNode Node { get; set; } = null!;
+    string DeviceType; 
     string svgContent; 
 
 protected override async Task OnInitializedAsync()
@@ -30,10 +31,10 @@ protected override async Task OnInitializedAsync()
     var randomIndex = random.Next(0, deviceTypes.Length);
     
     // Get a random device type
-    var selectedDeviceType = deviceTypes[randomIndex];
+    DeviceType = deviceTypes[randomIndex].ToString();
     
     // Convert the enum value to a file name
-    var selectedFile = $"{selectedDeviceType}.svg";
+    var selectedFile = $"{DeviceType}.svg";
     
     // Load the SVG content
     svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");

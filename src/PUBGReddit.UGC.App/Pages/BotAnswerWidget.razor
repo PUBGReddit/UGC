@@ -1,0 +1,98 @@
+﻿@using PUBG.Reddit.UGC.Models
+@using Blazor.Diagrams.Components.Renderers
+@using Blazor.Diagrams.Core.Models
+@inject HttpClient Http
+
+<style>
+    .port-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip {
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        width: 120px;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        pointer-events: none;
+    }
+
+    .port-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<div class="custom-node @(Node.Selected ? " selected" : "")">
+    <div class="device-card" >
+        <div class="device-body">
+                 <div class="TriggerAction">
+
+               @foreach (var port in Node.Ports.Cast<DevicePort>().Where(x => x.Label.StartsWith("Action")))
+            {
+                    <div class="port-container">
+                        <PortRenderer Port="port" />
+                        <span class="tooltip">@port.Label</span>
+                    </div>
+            } 
+                </div>
+
+            @((MarkupString)(svgContent ?? ""))
+
+                <div class="TriggerAction">
+
+    
+
+
+                
+            @foreach (var port in Node.Ports.Cast<DevicePort>().Where(x => x.Label.StartsWith("Trigger")))
+            {
+                    <div class="port-container">
+                         <PortRenderer Port="port"/>
+                        <span class="tooltip">@port.Label</span>
+                    </div>
+            }
+                </div>
+      
+        </div>
+            <h5 class="device-title">@DeviceType</h5>
+
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public required BotAnswerNode Node { get; set; }
+    string? DeviceType; 
+    string? svgContent; 
+    protected override async Task OnInitializedAsync()
+{
+    // Get all device types from the enum
+    var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
+    
+    // Generate a random index
+    var random = new Random();
+    var randomIndex = random.Next(0, deviceTypes.Length);
+    
+    // Get a random device type
+    DeviceType = deviceTypes[randomIndex].ToString();
+    
+    // Convert the enum value to a file name
+    var selectedFile = $"{DeviceType}.svg";
+    
+    // Load the SVG content
+    svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");
+} 
+}
