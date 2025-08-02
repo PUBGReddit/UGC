@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="DiagramWidget\AirDrop.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Pages\Weather.razor.cs" />
   </ItemGroup>
 
