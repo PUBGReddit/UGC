@@ -11,6 +11,15 @@ namespace PUBGReddit.UGC.App.Models
             {
                 new Map
                 {
+                    Name = "Wild Wild West",
+                    LastChangeDate = new DateOnly(2025, 8, 1),
+                    Author = "Delzaugh & Xenny",
+                    ImageUrl = "https://picsum.photos/1920/1080",
+                    Description = "A thrilling desert map with unique challenges.",
+                    MapUrl = "https://github.com/PUBGReddit/UGC/blob/main/maps_gallery/WildWest/WILD_WEST_Draft.pugc",
+                    Tags = "GunMode, TDM, One-In-The-Chamber"
+                },   new Map
+                {
                     Name = "Desert Arena",
                     LastChangeDate = new DateOnly(2025, 8, 1),
                     Author = "John Doe",
