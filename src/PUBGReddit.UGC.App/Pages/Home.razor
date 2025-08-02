@@ -13,6 +13,7 @@
                 <MudSelectItem Value="@tag">@tag</MudSelectItem>
             }
         </MudSelect>
+        <MudButton Variant="Variant.Text" Color="Color.Primary" @onclick="ClearTagFilter">Clear Filter</MudButton>
 
           <div class="pagination-controls" Style="text-align: center; margin: 20px auto;">
             <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Color="Color.Primary" @onclick="PreviousPage" Disabled="@IsFirstPage" />
@@ -43,16 +44,16 @@
                     <CardHeaderActions>
 
                       
-        <MudIconButton Icon="@Icons.Material.Filled.Download" Color="Color.Default" Href="@map.MapUrl"  />
+        <MudButton  EndIcon="@Icons.Material.Filled.Download" Color="Color.Primary" Href="@map.MapUrl"></MudButton>
 
                     </CardHeaderActions>
                 </MudCardHeader>
                 <MudCardMedia Image="@map.ImageUrl" Alt="@map.Name" />
                 <MudCardContent> 
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 4px;">
                         @foreach (var tag in map.Tags?.Split(',') ?? Array.Empty<string>())
                         {
-                            <MudChip T="string" Disabled="true" Variant="Variant.Text">@tag</MudChip>
+                            <MudChip T="string" Disabled="true" Variant="Variant.Text" Color="Color.Primary">@tag</MudChip> 
                         }
                     </div>
                     <MudText Typo="Typo.body2">@map.Description</MudText>
@@ -119,5 +120,9 @@
             .OrderBy(tag => tag)
             .ToList();
     }
- 
+
+    private void ClearTagFilter()
+    {
+        selectedTag = string.Empty;
+    }
 }
