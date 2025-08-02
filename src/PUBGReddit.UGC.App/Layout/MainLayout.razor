@@ -1,6 +1,8 @@
 @inherits LayoutComponentBase
 
 <MudThemeProvider Theme="@_theme" IsDarkMode="true" />
+
+<MudPopoverProvider />
 <MudLayout>
     <MudAppBar Elevation="1">
  <div class="d-flex justify-space-between" style="width: fit-content;margin: auto;">
@@ -47,7 +49,7 @@
         Primary = "#F2A900", // PUBG Orange
         Secondary = "#A69B98", // PUBG Tan
         Tertiary = "#8A7353", // PUBG Green
-        Surface = "#000000", // PUBG Black
+        Surface = "#222222", // PUBG Black
         Background = "#222222", // PUBG Gray
         BackgroundGray = "#333333", // Slightly lighter than PUBG Gray
         AppbarText = "#FFFFFF", // PUBG White

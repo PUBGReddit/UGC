@@ -1,1 +1,72 @@
 ﻿@page "/"
+
+@using PUBGReddit.UGC.App.Models
+@using MudBlazor
+
+<MudTextField @bind-Value="searchQuery" Placeholder="Search maps..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Class="mb-4" />
+
+<MudSelect T="string" @bind-Value="selectedTag" Placeholder="Filter by tag" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.FilterList" Class="mb-4">
+    @foreach (var tag in Tags)
+    {
+        <MudSelectItem Value="@tag">@tag</MudSelectItem>
+    }
+</MudSelect>
+
+<MudGrid Justify="Justify.Center" AlignItems="AlignItems.Center" Spacing="4" Style="margin: auto; max-width: 90%;">
+    @foreach (var map in Maps.Where(m => (string.IsNullOrEmpty(searchQuery) || m.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)) && (string.IsNullOrEmpty(selectedTag) || (m.Tags != null && m.Tags.Split(',').Contains(selectedTag)))).OrderByDescending(m => m.LastChangeDate))
+    {
+        <MudItem xs="12" sm="6" md="4" Style="max-width: 500px;">
+            <MudCard>
+                  <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.subtitle1">@map.Name</MudText>
+                        <MudText Typo="Typo.caption">By @map.Author</MudText>
+                      <MudSpacer/>
+                      
+                    </CardHeaderContent>
+                    <CardHeaderActions>
+
+                        @if (map.LastChangeDate >= DateOnly.FromDateTime(DateTime.Now.AddDays(-7)))
+                        {
+                            <MudIcon Icon="@Icons.Material.Filled.NewReleases" Color="Color.Primary" Class="ml-2" />
+                        }
+                    </CardHeaderActions>
+                </MudCardHeader>
+                <MudCardMedia Image="@map.ImageUrl" Alt="@map.Name" />
+                <MudCardContent> 
+                    <MudText Typo="Typo.body2">@map.Tags</MudText>
+                    <MudText Typo="Typo.body2">@map.Description</MudText>
+                        <MudText Typo="Typo.caption">Last Changed: @map.LastChangeDate.ToString("MMMM dd, yyyy")</MudText>
+
+                </MudCardContent>
+                <MudCardActions>
+        <MudIconButton Icon="@Icons.Material.Filled.Download" Color="Color.Default" />
+    </MudCardActions>
+                
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+
+@code {
+    private string searchQuery = string.Empty;
+    private string selectedTag = string.Empty;
+
+    private List<string> Tags = new List<string>();
+
+    private List<Map> Maps = TestMapProvider.GetTestMaps();
+
+    protected override void OnInitialized()
+    {
+        ExtractTagsFromMaps();
+    }
+
+    private void ExtractTagsFromMaps()
+    {
+        Tags = Maps
+            .SelectMany(map => map.Tags?.Split(',') ?? Array.Empty<string>())
+            .Distinct()
+            .OrderBy(tag => tag)
+            .ToList();
+    }
+}
