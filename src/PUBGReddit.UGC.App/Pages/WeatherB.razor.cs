@@ -19,9 +19,8 @@ namespace PUBGReddit.UGC.App.Pages
         {
             base.OnInitialized();
 
-            BlazorDiagram.RegisterComponent<AirDropNode, AirDropWidget>();
             BlazorDiagram.RegisterComponent<DeviceNode, DeviceWidget>();
-            var node1 = NewNode(50, 50);
+            var node1 = NewDeviceNode(50, 50);
             var node2 = NewDeviceNode(300, 300);
             var node3 = NewDeviceNode(300, 50);
             BlazorDiagram.Nodes.Add(node1);
@@ -61,13 +60,6 @@ namespace PUBGReddit.UGC.App.Pages
         protected void ToggleVirtualization()
             => BlazorDiagram.Options.Virtualization.Enabled = !BlazorDiagram.Options.Virtualization.Enabled;
 
-        private NodeModel NewNode(double x, double y)
-        {
-            var node = new AirDropNode(new Point(x, y)); 
-            node.AddPort(PortAlignment.Left);
-            node.AddPort(PortAlignment.Right);
-            return node;
-        }
         
           private NodeModel NewDeviceNode(double x, double y)
         {

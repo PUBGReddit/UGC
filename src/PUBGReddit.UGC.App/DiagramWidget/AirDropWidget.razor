@@ -1,6 +1,10 @@
 @using Blazor.Diagrams.Components.Renderers
 @using Blazor.Diagrams.Core.Models
+@using Blazor.Diagrams.Core.Models.Base
+@using PUBG.Reddit.UGC.Models
 @using PUBGReddit.UGC.App.DiagramWidget
+@using System
+
 @inject HttpClient Http
 @inject IJSRuntime JS
 
@@ -19,36 +23,24 @@
 @code {
     // This gets filled by the library
     [Parameter] public AirDropNode Node { get; set; } = null!;
-    string svgContent; 
+    string svgContent = string.Empty; 
 
-protected override async Task OnInitializedAsync()
-{
-    // Select a random SVG file from the DeviceSVG folder
-    var svgFiles = new string[]
+    protected override async Task OnInitializedAsync()
     {
-        "AirDrop.svg",
-        "AirPlane.svg",
-        "PlayerEvent.svg",
-        "BGM.svg",
-        "Interaction.svg",
-        "Mover.svg",
-        "RandomTrigger.svg",
-        "RedZone.svg",
-        "VehicleSpawn.svg",
-        "SuperJump.svg"
-    };
-    
-    // Generate a random index
-    var random = new Random();
-    var randomIndex = random.Next(0, svgFiles.Length);
-    
-    // Get the selected SVG file
-    var selectedFile = svgFiles[randomIndex];
-    
-    // Load the SVG content
-    svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");
-}
-
-
- 
+        // Get all device types from the enum
+        var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
+        
+        // Generate a random index
+        var random = new Random();
+        var randomIndex = random.Next(0, deviceTypes.Length);
+        
+        // Get a random device type
+        var selectedDeviceType = deviceTypes[randomIndex];
+        
+        // Convert the enum value to a file name
+        var selectedFile = $"{selectedDeviceType}.svg";
+        
+        // Load the SVG content
+        svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");
+    }
 }

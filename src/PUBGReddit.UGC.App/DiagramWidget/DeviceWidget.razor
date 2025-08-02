@@ -1,5 +1,6 @@
 @using Blazor.Diagrams.Components.Renderers
 @using Blazor.Diagrams.Core.Models
+@using PUBG.Reddit.UGC.Models
 @using PUBGReddit.UGC.App.DiagramWidget
 @inject HttpClient Http
 @((MarkupString)svgContent)
@@ -21,27 +22,18 @@
 
 protected override async Task OnInitializedAsync()
 {
-    // Select a random SVG file from the DeviceSVG folder
-    var svgFiles = new string[]
-    {
-        "AirDrop.svg",
-        "AirPlane.svg",
-        "PlayerEvent.svg",
-        "BGM.svg",
-        "Interaction.svg",
-        "Mover.svg",
-        "RandomTrigger.svg",
-        "RedZone.svg",
-        "VehicleSpawn.svg",
-        "SuperJump.svg"
-    };
+    // Get all device types from the enum
+    var deviceTypes = Enum.GetValues(typeof(DeviceType)).Cast<DeviceType>().ToArray();
     
     // Generate a random index
     var random = new Random();
-    var randomIndex = random.Next(0, svgFiles.Length);
+    var randomIndex = random.Next(0, deviceTypes.Length);
     
-    // Get the selected SVG file
-    var selectedFile = svgFiles[randomIndex];
+    // Get a random device type
+    var selectedDeviceType = deviceTypes[randomIndex];
+    
+    // Convert the enum value to a file name
+    var selectedFile = $"{selectedDeviceType}.svg";
     
     // Load the SVG content
     svgContent = await Http.GetStringAsync($"images/DeviceSVG/{selectedFile}");

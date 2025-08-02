@@ -29,4 +29,8 @@
     <PackageReference Include="Z.Blazor.Diagrams" Version="3.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PUBG.Reddit.UGC.Models\PUBG.Reddit.UGC.Models.csproj" />
+  </ItemGroup>
+
 </Project>
