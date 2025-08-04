@@ -27,7 +27,7 @@
     @foreach (var map in PagedMaps)
     {
         <MudItem xs="12" sm="6" md="4">
-            <MudCard Elevation="2" Square="true">
+            <MudCard Elevation="2" class="displaypaper" >
                   <MudCardHeader>
                     <CardHeaderContent>
                         <div style="display: flex; align-items: center;">
@@ -44,7 +44,7 @@
                     <CardHeaderActions>
 
                       
-        <MudButton  EndIcon="@Icons.Material.Filled.Download" Color="Color.Primary" Href="@map.MapUrl"></MudButton>
+            <MudIconButton  Icon="@Icons.Material.Filled.Download" Color="Color.Primary" Href="@map.MapUrl"></MudIconButton>
 
                     </CardHeaderActions>
                 </MudCardHeader>
