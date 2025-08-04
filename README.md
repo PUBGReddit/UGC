@@ -11,7 +11,7 @@ Using Custom Match, you can design core rules, gameplay logic, and world-buildin
 ## 📅 Availability UGC
 
 Currently, UGC is available only to PUBG Partners, esports players, core creators, and competitive leaders.  
-Starting in **August** (Update 37.1), **any player with a BATTLEGROUNDS Plus account** will be able to create UGC Alpha sessions in Custom Match.
+Starting as of **August 13th** (Update 37.1), **any player with a BATTLEGROUNDS Plus account** will be able to create UGC Alpha sessions in Custom Match.
 
 ## 🚀 Getting Started
 
