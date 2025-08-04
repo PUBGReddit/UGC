@@ -126,7 +126,7 @@ code {
     text-align: start;
 }
 
-/* Main app background styling */
+/* Main app background styling 
 .mud-layout {
     background-image: url('../images/Main_Background.jpg');
     background-size: cover;
@@ -134,7 +134,7 @@ code {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-}
+}*/
 
 /* Semi-transparent overlay for better text readability */
 .mud-layout::before {

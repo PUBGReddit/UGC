@@ -61,8 +61,11 @@
 </head>
 
 <body>
+ 
     <div id="app">
-        <div class="app-title-container">
+           <div class="loading-background" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <!-- Full screen div -->
+        <div class="app-title-container ">
             <h1 class="app-title">PUBG REDDIT UGC</h1>
             <p class="app-subtitle">Tools for User Generated Content</p>
         </div>
@@ -71,6 +74,8 @@
             <circle r="40%" cx="50%" cy="50%" />
         </svg>
         <div class="loading-progress-text"></div>
+    </div>
+
     </div>
 
     <div id="blazor-error-ui">
