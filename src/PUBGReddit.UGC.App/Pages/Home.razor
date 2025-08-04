@@ -53,10 +53,10 @@
                     <div style="display: flex; flex-wrap: wrap; gap: 4px;">
                         @foreach (var tag in map.Tags?.Split(',') ?? Array.Empty<string>())
                         {
-                            <MudChip T="string" Disabled="true" Variant="Variant.Text" Color="Color.Primary">@tag</MudChip> 
+                            <MudChip Size="Size.Small" Class="ma-0" T="string" Disabled="true" Variant="Variant.Outlined" Color="Color.Primary">@tag</MudChip> 
                         }
                     </div>
-                    <MudText Typo="Typo.body2">@map.Description</MudText>
+                    <MudText Class="my-4" Typo="Typo.body2">@map.Description</MudText>
                         <MudText Typo="Typo.caption">Last Changed: @map.LastChangeDate.ToString("MMMM dd, yyyy")</MudText>
 
                 </MudCardContent> 
