@@ -4,11 +4,7 @@
 
 ## Description
 
-Triggers when damage is taken.
-
-## Notes
-
-Setup and use of this device seems to be broken at this time.
+Triggers when this device takes damage.
 
 ## Basic
 
