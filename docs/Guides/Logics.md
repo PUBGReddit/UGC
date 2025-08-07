@@ -1,12 +1,12 @@
-## Give Every Player item(s) when they Spawn
+## Give Every Player item(s) when they (re)spawn
 
 **Goal:**  
 Every player receives Item(s) immediately upon spawning.
 
 ### Devices Used
 
-- **Player Spawn Device:** Detects when a player spawns.
-- **Item Provide Device:** Gives item(s) to the spawning player.
+- **Player Spawn Device**
+- **Item Provide Device**
 
 ### How It Works
 
@@ -32,8 +32,8 @@ Have all Vehicle Spawn devices spawn a vehicle when the round starts.
 
 ### Devices Used
 
-- **Round Event Device:**
-- **Vehicle Spawn Device:**
+- **Round Event Device**
+- **Vehicle Spawn Device**
 
 ### How It Works
 
