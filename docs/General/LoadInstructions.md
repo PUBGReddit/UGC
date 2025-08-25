@@ -1,5 +1,3 @@
-# Save and Load Instructions
-
 ## How to Load a File While In-Game
 1. **Download** the `.pugc` file you wish to play.
 2. **Load up** your UGC Lobby and start it.

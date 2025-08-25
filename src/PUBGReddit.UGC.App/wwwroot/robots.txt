@@ -1,1 +1,0 @@
-Sitemap: https://dotnet.github.io/blazor-samples/sitemap.txt
