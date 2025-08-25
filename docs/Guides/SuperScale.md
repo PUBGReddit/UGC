@@ -1,5 +1,3 @@
-## Superscale Props
-
 ### Steps
 
 1. Begin with a scaling factor of **1.0** across all axes.
